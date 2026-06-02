@@ -34,3 +34,13 @@ Route::middleware('auth')->group(function () {
 
 // Stripe Webhook (no CSRF)
 Route::post('/webhook/stripe', [StripeController::class, 'webhook'])->name('stripe.webhook');
+
+// Feature Modules (auto-loaded)
+$modules = glob(base_path('app/Modules/*/routes.php'));
+foreach ($modules as $routes) {
+    $moduleName = basename(dirname($routes));
+    $envKey = 'FEATURE_' . strtoupper($moduleName);
+    if (env($envKey, false)) {
+        require $routes;
+    }
+}
