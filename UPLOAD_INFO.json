@@ -1,0 +1,61 @@
+{
+  "product_name": "Praxis Website Score",
+  "product_slug": "praxis-website-score",
+  "product_type": "Micro SaaS",
+  "category": "Software > Marketing Tools > Website Analysis",
+  "price_euro": 19.00,
+  "price_range": "€19-49/mo",
+  "currency": "EUR",
+
+  "digistore24": {
+    "product_title": "Praxis Website Score — Automatische Website-Analyse für Therapeuten & Ärzte",
+    "product_subtitle": "60 Sekunden → Score → PDF-Report",
+    "payment_type": "subscription",
+    "order_button_text": "Jetzt starten — 19€/Monat",
+    "guarantee": "14-Tage Geld-zurück-Garantie",
+    "description_html": "<h2>Das Problem</h2><p>Therapeuten und Ärzte investieren Tausende in ihre Praxis — aber die Website bleibt veraltet, langsam und nicht SEO-optimiert. Patienten suchen heute über Google und entscheiden in Sekunden.</p><h2>Die Lösung</h2><p>Praxis Website Score analysiert jede Website in 60 Sekunden in 6 Kategorien: Performance, SEO, Mobile, Content, Sicherheit, Design. Ergebnis: Ein klarer Score von 0-100 plus PDF-Report mit Verbesserungsempfehlungen.</p><h2>Features</h2><ul><li>Automatische Website-Analyse (50+ Kriterien)</li><li>Score in 6 Kategorien</li><li>PDF-Report (Pro & Business)</li><li>Branchenvergleich für Therapeuten/Ärzte</li><li>Impressum & DSGVO-Check</li><li>Mobile-Friendly Analyse</li><li>SEO-Check (Title, Meta, H1, Alt-Text, etc.)</li><li>Sicherheits-Check (HTTPS, Security-Headers)</li><li>White-Label PDF (Business)</li><li>API-Zugang (Business)</li></ul>"
+  },
+
+  "lemonsqueezy": {
+    "product_name": "Praxis Website Score",
+    "store_category": "saas",
+    "pricing_model": "subscription",
+    "price_cents": 1900,
+    "description_markdown": "# Praxis Website Score\n\n**Automatische Website-Analyse für Therapeuten, Ärzte & Dienstleister.**\n\nIn 60 Sekunden bewertet unser Tool deine Website in 6 Kategorien:\n\n- ⚡ Performance (Ladezeit, Kompression, Optimierung)\n- 🔍 SEO (Title, Meta, Headings, Alt-Text, Structured Data)\n- 📱 Mobile (Responsive, Viewport, Touch-Friendly)\n- 📝 Content (Wortanzahl, Impressum, Datenschutz, Leistungen)\n- 🔒 Sicherheit (HTTPS, Security-Headers)\n- 🎨 Design (CSS-Framework, Fonts, CTA-Buttons)\n\n## Pläne\n- **Free:** 1 Analyse, Basis-Score\n- **Pro (€19/mo):** 30 Analysen, PDF-Reports, Branchenvergleich\n- **Business (€49/mo):** Unbegrenzt, White-Label, API\n\n## Was du bekommst\n- Kompletter Laravel 11 Source Code\n- Installationsanleitung (DE)\n- Shared Hosting kompatibel\n- SQLite (kein MySQL nötig)",
+    "cover_image_prompt": "Professional SaaS dashboard showing website analysis results, score circles, category breakdowns, clean indigo and white color scheme, modern minimalist design, no text --ar 4:3 --v 6"
+  },
+
+  "paddle": {
+    "product_name": "Praxis Website Score",
+    "product_type": "standard",
+    "product_category": "Software",
+    "base_price_eur": 19.00,
+    "title": "Praxis Website Score — Automatische Website-Analyse",
+    "short_description": "60 Sekunden → Score 0-100 → PDF-Report. Für Therapeuten, Ärzte & Dienstleister.",
+    "delivery_method": "file_download"
+  },
+
+  "kopecart": {
+    "product_name": "Praxis Website Score",
+    "german_title": "Praxis Website Score — Automatische Website-Analyse für Therapeuten",
+    "german_description": "Analysiert Praxis-Websites in 60 Sekunden: Performance, SEO, Mobile, Content, Sicherheit, Design. Inklusive PDF-Report mit Verbesserungsempfehlungen.",
+    "product_type": "digital_download",
+    "price_cents": 1900,
+    "order_bump_enabled": true,
+    "order_bump_name": "Agentur-Lizenz (5 Accounts)",
+    "order_bump_price_cents": 2900,
+    "order_bump_description": "Nutze das Tool für bis zu 5 Kunden-Accounts. Perfekt für Webdesign-Agenturen."
+  },
+
+  "seo": {
+    "primary_keywords": ["website analyse", "website score", "praxis website", "therapeuten website", "website check"],
+    "long_tail_keywords": [
+      "website analyse kostenlos therapeut",
+      "praxis website optimieren",
+      "website score test ärzte",
+      "seo check praxis website deutsch",
+      "website bewertung therapeut kostenlos"
+    ],
+    "tags": ["website-analyse", "seo-check", "praxis", "therapeut", "arzt", "website-score", "laravel", "saas", "php", "marketing", "deutsch", "dsgvo", "impressum", "mobile-optimierung"]
+  }
+}
