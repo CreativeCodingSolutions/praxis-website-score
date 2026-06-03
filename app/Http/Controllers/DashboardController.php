@@ -15,13 +15,67 @@ class DashboardController extends Controller
     {
         $userId = Auth::id();
         $reports = Report::where('user_id', $userId)->latest()->paginate(10);
+        $recentEvaluations = Report::where('user_id', $userId)->latest()->take(5)->get();
         $stats = [
             'total' => Report::where('user_id', $userId)->count(),
             'avg_score' => Report::where('user_id', $userId)->avg('overall_score') ?? 0,
             'pro' => Report::where('user_id', $userId)->where('overall_score', '>=', 80)->count(),
             'user' => Auth::user(),
         ];
-        return view('dashboard.index', compact('reports', 'stats'));
+
+        // Module status for dashboard widget
+        $modules = [
+            [
+                'name' => 'Affiliate',
+                'description' => 'Empfehlungsprogramm',
+                'icon' => 'fa-handshake',
+                'enabled' => env('FEATURE_AFFILIATE', false),
+            ],
+            [
+                'name' => 'API Access',
+                'description' => 'API-Schlüssel verwalten',
+                'icon' => 'fa-key',
+                'enabled' => env('FEATURE_API_ACCESS', false),
+            ],
+            [
+                'name' => 'Team Management',
+                'description' => 'Team & Rollen',
+                'icon' => 'fa-users',
+                'enabled' => env('FEATURE_TEAM_MANAGEMENT', false),
+            ],
+            [
+                'name' => 'Reporting',
+                'description' => 'PDF-Reports & Auswertungen',
+                'icon' => 'fa-file-pdf',
+                'enabled' => env('FEATURE_REPORTING', false),
+            ],
+            [
+                'name' => 'White-Label',
+                'description' => 'Branding & Domain',
+                'icon' => 'fa-palette',
+                'enabled' => env('FEATURE_WHITELABEL', false),
+            ],
+            [
+                'name' => 'Stripe',
+                'description' => 'Zahlungen & Abos',
+                'icon' => 'fa-credit-card',
+                'enabled' => env('FEATURE_STRIPE', false),
+            ],
+            [
+                'name' => 'Email Verification',
+                'description' => 'E-Mail-Bestätigung',
+                'icon' => 'fa-envelope-circle-check',
+                'enabled' => env('FEATURE_EMAIL_VERIFICATION', false),
+            ],
+            [
+                'name' => 'Password Reset',
+                'description' => 'Passwort zurücksetzen',
+                'icon' => 'fa-lock',
+                'enabled' => env('FEATURE_PASSWORD_RESET', false),
+            ],
+        ];
+
+        return view('dashboard.index', compact('reports', 'stats', 'modules', 'recentEvaluations'));
     }
 
     public function check(Request $request)

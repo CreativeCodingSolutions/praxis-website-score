@@ -19,6 +19,9 @@
             <div class="flex items-center gap-4">
                 <a href="{{ route('dashboard') }}" class="text-sm text-gray-600 hover:text-indigo-600">Dashboard</a>
                 <a href="{{ route('pricing') }}" class="text-sm text-gray-600 hover:text-indigo-600">Preise</a>
+                @if(\App\Modules\Reporting\Module::isEnabled())
+                <a href="{{ route('reporting.index') }}" class="text-sm text-gray-600 hover:text-indigo-600">Reporting</a>
+                @endif
                 <span class="text-sm text-gray-400">{{ Auth::user()->name }}</span>
                 <form method="POST" action="/logout">@csrf<button class="text-sm text-red-400 hover:text-red-600"><i class="fa-solid fa-right-from-bracket"></i></button></form>
             </div>
