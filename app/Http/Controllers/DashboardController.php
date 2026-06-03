@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\Report;
 use App\Services\WebsiteScoreService;
 use App\Services\PdfReportService;

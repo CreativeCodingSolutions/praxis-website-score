@@ -10,6 +10,9 @@
             <p class="text-gray-500 mt-2">Melde dich an</p>
         </div>
         <div class="bg-white rounded-xl shadow-lg p-8">
+            @if(session('success'))
+                <div class="bg-green-50 border border-green-200 text-green-800 rounded-lg px-4 py-3 mb-4">{{ session('success') }}</div>
+            @endif
             <form method="POST" action="{{ route('login') }}" class="space-y-5">
                 @csrf
                 <div>
@@ -20,6 +23,12 @@
                 <div>
                     <label class="block text-sm font-medium text-gray-700 mb-1">Passwort</label>
                     <input type="password" name="password" required class="w-full px-4 py-2.5 border rounded-lg focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 outline-none">
+                </div>
+                <div class="flex items-center justify-between">
+                    <label class="flex items-center gap-2 text-sm text-gray-600">
+                        <input type="checkbox" name="remember" class="rounded"> Angemeldet bleiben
+                    </label>
+                    <a href="{{ route('password.request') }}" class="text-sm text-indigo-600 hover:underline">Passwort vergessen?</a>
                 </div>
                 <button type="submit" class="w-full bg-indigo-600 text-white py-2.5 rounded-lg font-medium hover:bg-indigo-700 transition">Anmelden</button>
             </form>

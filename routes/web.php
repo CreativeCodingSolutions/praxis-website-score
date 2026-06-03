@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\StripeController;
 
@@ -13,12 +14,25 @@ Route::get('/pricing', [DashboardController::class, 'pricing'])->name('pricing')
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [LoginController::class, 'login']);
-    Route::get('/register', [LoginController::class, 'showRegisterForm'])->name('register');
-    Route::post('/register', [LoginController::class, 'register']);
+    Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register');
+    Route::post('/register', [RegisterController::class, 'register']);
 });
 
+// Password Reset
+Route::middleware('guest')->group(function () {
+    Route::get('/forgot-password', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+    Route::post('/forgot-password', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+    Route::get('/reset-password/{token}', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'showResetForm'])->name('password.reset');
+    Route::post('/reset-password', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'reset'])->name('password.update');
+});
+
+// Email Verification
+Route::get('/email/verify', [\App\Http\Controllers\Auth\VerificationController::class, 'show'])->name('verification.notice');
+Route::get('/email/verify/{id}/{hash}', [\App\Http\Controllers\Auth\VerificationController::class, 'verify'])->name('verification.verify');
+Route::post('/email/resend', [\App\Http\Controllers\Auth\VerificationController::class, 'resend'])->name('verification.send');
+
 // Dashboard
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::post('/dashboard/check', [DashboardController::class, 'check'])->name('dashboard.check');
@@ -33,3 +47,12 @@ Route::middleware('auth')->group(function () {
 
 // Stripe Webhook (no CSRF)
 Route::post('/webhook/stripe', [StripeController::class, 'webhook'])->name('stripe.webhook');
+
+// Module Loader - loads routes from modules with feature flags enabled
+$modules = glob(base_path('app/Modules/*/routes.php'));
+foreach ($modules as $routes) {
+    $moduleName = basename(dirname($routes));
+    if (env('FEATURE_' . strtoupper($moduleName), false)) {
+        require $routes;
+    }
+}

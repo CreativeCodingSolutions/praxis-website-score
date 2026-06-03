@@ -3,7 +3,7 @@
         'name' => 'website-score/website-score',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => 'b0af096d292d696a6e6ae2be0d2b741e7082eb13',
+        'reference' => '184fb124467385c46cbfd961902e48518a84181a',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -1007,7 +1007,7 @@
         'website-score/website-score' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => 'b0af096d292d696a6e6ae2be0d2b741e7082eb13',
+            'reference' => '184fb124467385c46cbfd961902e48518a84181a',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

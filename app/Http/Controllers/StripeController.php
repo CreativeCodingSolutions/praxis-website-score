@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Controller;
+
 namespace App\Http\Controllers;
 
 use App\Services\StripeCheckoutService;
