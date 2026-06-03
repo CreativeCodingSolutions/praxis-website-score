@@ -14,7 +14,11 @@ Route::get('/pricing', [DashboardController::class, 'pricing'])->name('pricing')
 Route::middleware('guest')->group(function () {
     Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
     Route::post('/login', [LoginController::class, 'login']);
+<<<<<<< HEAD
     Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register');
+=======
+    Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+>>>>>>> f0a8cae41bc5b63c29517ed053f8c04349c1c9e1
     Route::post('/register', [RegisterController::class, 'register']);
 });
 
@@ -48,11 +52,20 @@ Route::middleware(['auth', 'verified'])->group(function () {
 // Stripe Webhook (no CSRF)
 Route::post('/webhook/stripe', [StripeController::class, 'webhook'])->name('stripe.webhook');
 
+<<<<<<< HEAD
 // Module Loader - loads routes from modules with feature flags enabled
 $modules = glob(base_path('app/Modules/*/routes.php'));
 foreach ($modules as $routes) {
     $moduleName = basename(dirname($routes));
     if (env('FEATURE_' . strtoupper($moduleName), false)) {
+=======
+// Feature Modules (auto-loaded)
+$modules = glob(base_path('app/Modules/*/routes.php'));
+foreach ($modules as $routes) {
+    $moduleName = basename(dirname($routes));
+    $envKey = 'FEATURE_' . strtoupper($moduleName);
+    if (env($envKey, false)) {
+>>>>>>> f0a8cae41bc5b63c29517ed053f8c04349c1c9e1
         require $routes;
     }
 }

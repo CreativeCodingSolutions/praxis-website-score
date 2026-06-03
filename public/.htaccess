@@ -1,5 +1,5 @@
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c">
+    <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
     RewriteEngine On
@@ -13,7 +13,7 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 Options -Indexes
-<Files .env>
+<FilesMatch "\.env">
     Order allow,deny
     Deny from all
-</Files>
+</FilesMatch>
