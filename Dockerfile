@@ -10,12 +10,13 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 WORKDIR /var/www
 
-COPY composer.json composer.lock ./
-# Ignore security advisories for Laravel 11 (known issue with locked versions)
-RUN composer config --no-plugins policy.advisories.block false 2>/dev/null || true
-RUN composer update --no-dev --optimize-autoloader --no-scripts 2>&1
-
 COPY . .
+
+# Remove lock file and install fresh with PHP 8.2 compatible versions
+RUN rm -f composer.lock && \
+    composer config --no-plugins policy.advisories.block false 2>/dev/null || true && \
+    composer require "laravel/framework:^11.0" --no-interaction --no-scripts 2>&1 && \
+    composer install --no-dev --optimize-autoloader --no-scripts 2>&1
 
 RUN mkdir -p storage/framework/views storage/framework/cache storage/framework/sessions storage/app bootstrap/cache database \
     && chmod -R 775 storage bootstrap/cache \
