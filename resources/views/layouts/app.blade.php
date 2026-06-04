@@ -3,17 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Praxis Website Score')</title>
+    <title>@yield('title', 'Praxis Website Score — Kostenloser Website-Check für Praxen')</title>
+    <meta name="description" content="@yield('meta_description', 'Kostenloser Website-Check für Praxen, Handwerker und Restaurants in Deutschland, Österreich und Schweiz. Analyse von Ladegeschwindigkeit, SEO und Mobile-Darstellung.')">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4F46E5">
+    <link rel="canonical" href="@yield('canonical', url()->current())">
+    <meta name="keywords" content="Website check, Praxis website, Website bewertung, SEO check, Website analyse, Arzt website, Handwerker website, DACH">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="@yield('og_title', 'Praxis Website Score — Kostenloser Website-Check für Praxen')">
+    <meta property="og:description" content="@yield('og_description', 'Kostenloser Website-Check für Praxen, Handwerker und Restaurants in DACH. Ergebnis in 30 Sekunden.')">
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:url" content="@yield('og_url', url()->current())">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Praxis Website Score">
+    @yield('og_tags')
+
+    <!-- Schema.org Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "CreativeCodingSolutions",
+        "url": "https://creativecoding.cloud",
+        "logo": "https://creativecoding.cloud/logo.png",
+        "sameAs": [],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "availableLanguage": "German"
+        }
+    }
+    </script>
+    @yield('schema')
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="robots" content="index, follow">
-    <meta name="theme-color" content="#4F46E5">
-    @yield('meta_description')
-    @yield('meta_keywords')
-    @yield('canonical')
-    @yield('og_tags')
-    @yield('schema')
     @stack('head')
 </head>
 <body class="bg-gray-50 min-h-screen">

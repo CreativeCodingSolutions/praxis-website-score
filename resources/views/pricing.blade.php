@@ -1,5 +1,46 @@
 @extends('layouts.app')
-@section('title', 'Preise — Praxis Website Score')
+@section('title', 'Preise — Praxis Website Score | Kostenlos & Pro ab €19/Monat')
+@section('meta_description', 'Einfache, faire Preise für den Praxis Website Score. Kostenlos starten, Pro-Report ab €19/Monat. Keine versteckten Kosten, monatlich kündbar. DACH-Fokus.')
+
+@section('og_tags')
+<meta property="og:title" content="Preise — Praxis Website Score | Kostenlos & Pro ab €19/Monat">
+<meta property="og:description" content="Einfache, faire Preise. Kostenlos starten, Pro-Report ab €19/Monat. Keine versteckten Kosten.">
+<meta property="og:type" content="website">
+@endsection
+
+@section('schema')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Praxis Website Score",
+    "description": "Kostenloser Website-Check für Praxen, Handwerker und Restaurants in DACH.",
+    "offers": [
+        {
+            "@type": "Offer",
+            "name": "Free",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "description": "Einmaliger Basis-Score, sofortiges Ergebnis, Verbesserungshinweise"
+        },
+        {
+            "@type": "Offer",
+            "name": "Pro",
+            "price": "19",
+            "priceCurrency": "EUR",
+            "description": "30 Analysen/Monat, PDF-Reports, Branchenvergleich"
+        },
+        {
+            "@type": "Offer",
+            "name": "Business",
+            "price": "49",
+            "priceCurrency": "EUR",
+            "description": "Unbegrenzte Analysen, White-Label PDF, API-Zugang"
+        }
+    ]
+}
+</script>
+@endsection
 
 @section('content')
 <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
