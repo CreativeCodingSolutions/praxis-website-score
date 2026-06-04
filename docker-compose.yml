@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  praxiswebsitescore:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      - APP_ENV=production
+      - APP_DEBUG=false
+      - APP_URL=https://praxiswebsitescore.creativecoding.cloud
+    volumes:
+      - praxis-storage:/var/www/storage
+      - praxis-database:/var/www/database
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.praxiswebsitescore.rule=Host(`praxiswebsitescore.creativecoding.cloud`)"
+      - "traefik.http.routers.praxiswebsitescore.entrypoints=websecure"
+      - "traefik.http.routers.praxiswebsitescore.tls.certresolver=letsencrypt"
+      - "traefik.http.services.praxiswebsitescore.loadbalancer.server.port=10000"
+    healthcheck:
+      test: ["CMD", "php", "artisan", "route:list"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+volumes:
+  praxis-storage:
+  praxis-database:
+
+networks:
+  default:
+    name: traefik
+    external: true
