@@ -11,7 +11,7 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www
 
 COPY composer.json composer.lock ./
-RUN composer install --no-dev --optimize-autoloader --no-scripts 2>&1
+RUN composer update --no-dev --optimize-autoloader --no-scripts 2>&1
 
 COPY . .
 
