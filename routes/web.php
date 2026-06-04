@@ -4,11 +4,22 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GuestScoreController;
 use App\Http\Controllers\StripeController;
 
 // Public
 Route::get('/', function () { return view('landing'); })->name('landing');
 Route::get('/pricing', [DashboardController::class, 'pricing'])->name('pricing');
+
+// Guest Score — no login required
+Route::post('/check', [GuestScoreController::class, 'analyze'])->name('guest.score.analyze');
+Route::get('/score/{uuid}', [GuestScoreController::class, 'show'])->name('guest.score.show');
+Route::post('/score/{uuid}/capture', [GuestScoreController::class, 'captureEmail'])->name('guest.score.capture');
+
+// Legal Pages
+Route::get('/impressum', function () { return view('legal.impressum'); })->name('legal.impressum');
+Route::get('/datenschutz', function () { return view('legal.datenschutz'); })->name('legal.datenschutz');
+Route::get('/agb', function () { return view('legal.agb'); })->name('legal.agb');
 
 // Auth
 Route::middleware('guest')->group(function () {
@@ -31,6 +42,13 @@ Route::get('/email/verify', [\App\Http\Controllers\Auth\VerificationController::
 Route::get('/email/verify/{id}/{hash}', [\App\Http\Controllers\Auth\VerificationController::class, 'verify'])->name('verification.verify');
 Route::post('/email/resend', [\App\Http\Controllers\Auth\VerificationController::class, 'resend'])->name('verification.send');
 
+// Legal Pages
+Route::get('/impressum', function () { return view('legal.impressum'); })->name('legal.impressum');
+Route::get('/datenschutz', function () { return view('legal.datenschutz'); })->name('legal.datenschutz');
+
+// Blog Route
+Route::get('/blog', function () { return view('blog.index'); })->name('blog.index');
+
 // Dashboard
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
@@ -50,12 +68,15 @@ Route::post('/webhook/stripe', [StripeController::class, 'webhook'])->name('stri
 
 // Module Loader - loads routes from modules with feature flags enabled
 $modules = glob(base_path('app/Modules/*/routes.php'));
+// Module Loader
+$modules = glob(base_path('app/Modules/*/routes.php'));
 foreach ($modules as $routes) {
     $moduleName = basename(dirname($routes));
-    // Convert camelCase module name to SCREAMING_SNAKE_CASE env key
-    // e.g. "LeadCapture" -> "FEATURE_LEAD_CAPTURE"
     $envKey = 'FEATURE_' . strtoupper(preg_replace('/([a-z])([A-Z])/', '$1_$2', $moduleName));
     if (env($envKey, false)) {
         require $routes;
     }
 }
+
+// Sitemap
+require base_path('routes/sitemap.php');

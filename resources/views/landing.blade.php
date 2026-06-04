@@ -40,7 +40,7 @@
                 Wir analysieren Ihre Website auf die Dinge, die wirklich zählen: Ladegeschwindigkeit, Google-Sichtbarkeit, Darstellung auf dem Handy. Das Ergebnis bekommen Sie sofort — keine Anmeldung nötig.
             </p>
 
-            <form action="{{ route('dashboard.check') }}" method="POST" class="mb-4">
+            <form action="{{ route('guest.score.analyze') }}" method="POST" class="mb-4">
                 @csrf
                 <div class="flex flex-col sm:flex-row gap-2">
                     <input type="url" name="url" required placeholder="Ihre Website-Adresse (z.B. www.muster-praxis.de)"
