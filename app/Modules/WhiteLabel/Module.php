@@ -10,6 +10,6 @@ class Module
 
     public static function isEnabled(): bool
     {
-        return env('FEATURE_WHITELABEL', false);
+        return env('FEATURE_WHITE_LABEL', false);
     }
 }

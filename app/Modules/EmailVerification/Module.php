@@ -7,7 +7,7 @@ class Module
 {
     public static function isEnabled(): bool
     {
-        return env('FEATURE_EMAILVERIFICATION', false);
+        return env('FEATURE_EMAIL_VERIFICATION', false);
     }
 
     public static function boot()

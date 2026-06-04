@@ -7,7 +7,7 @@ class Module
 {
     public static function isEnabled(): bool
     {
-        return env('FEATURE_PASSWORDRESET', false);
+        return env('FEATURE_PASSWORD_RESET', false);
     }
 
     public static function boot()

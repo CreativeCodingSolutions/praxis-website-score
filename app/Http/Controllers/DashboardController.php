@@ -53,7 +53,7 @@ class DashboardController extends Controller
                 'name' => 'White-Label',
                 'description' => 'Branding & Domain',
                 'icon' => 'fa-palette',
-                'enabled' => env('FEATURE_WHITELABEL', false),
+                'enabled' => env('FEATURE_WHITE_LABEL', false),
             ],
             [
                 'name' => 'Stripe',
@@ -72,6 +72,24 @@ class DashboardController extends Controller
                 'description' => 'Passwort zurücksetzen',
                 'icon' => 'fa-lock',
                 'enabled' => env('FEATURE_PASSWORD_RESET', false),
+            ],
+            [
+                'name' => 'Lead Capture',
+                'description' => 'Besucher-Lead-Capture',
+                'icon' => 'fa-magnet',
+                'enabled' => env('FEATURE_LEAD_CAPTURE', false),
+            ],
+            [
+                'name' => 'Social Proof',
+                'description' => 'Social Proof Widgets',
+                'icon' => 'fa-shield-halved',
+                'enabled' => env('FEATURE_SOCIAL_PROOF', false),
+            ],
+            [
+                'name' => 'Review Collector',
+                'description' => 'Review-Links & Bewertungen',
+                'icon' => 'fa-star',
+                'enabled' => env('FEATURE_REVIEW_COLLECTOR', false),
             ],
         ];
 

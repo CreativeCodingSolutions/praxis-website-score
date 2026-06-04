@@ -52,7 +52,10 @@ Route::post('/webhook/stripe', [StripeController::class, 'webhook'])->name('stri
 $modules = glob(base_path('app/Modules/*/routes.php'));
 foreach ($modules as $routes) {
     $moduleName = basename(dirname($routes));
-    if (env('FEATURE_' . strtoupper($moduleName), false)) {
+    // Convert camelCase module name to SCREAMING_SNAKE_CASE env key
+    // e.g. "LeadCapture" -> "FEATURE_LEAD_CAPTURE"
+    $envKey = 'FEATURE_' . strtoupper(preg_replace('/([a-z])([A-Z])/', '$1_$2', $moduleName));
+    if (env($envKey, false)) {
         require $routes;
     }
 }
