@@ -10,9 +10,11 @@ class Lead extends Model
 
     protected $fillable = [
         'name', 'email', 'website_url', 'score', 'status',
+        'guest_report_id', 'ip_address', 'consent_given', 'consent_text', 'source',
     ];
 
     protected $casts = [
         'score' => 'integer',
+        'consent_given' => 'boolean',
     ];
 }

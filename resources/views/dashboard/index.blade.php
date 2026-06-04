@@ -150,6 +150,11 @@
                         <i class="fa-solid fa-palette w-5 text-center"></i> White-Label
                     </a>
                     @endif
+                    @if(\App\Modules\LeadCapture\Module::isEnabled())
+                    <a href="{{ route('leads.index') }}" class="flex items-center gap-2 text-sm text-gray-600 hover:text-indigo-600">
+                        <i class="fa-solid fa-users w-5 text-center"></i> Leads
+                    </a>
+                    @endif
                 </div>
             </div>
         </div>
