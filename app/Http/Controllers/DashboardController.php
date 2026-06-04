@@ -91,6 +91,12 @@ class DashboardController extends Controller
                 'icon' => 'fa-star',
                 'enabled' => env('FEATURE_REVIEW_COLLECTOR', false),
             ],
+            [
+                'name' => 'Appointment Booking',
+                'description' => 'Online-Terminbuchung',
+                'icon' => 'fa-calendar-check',
+                'enabled' => env('FEATURE_APPOINTMENT_BOOKING', false),
+            ],
         ];
 
         return view('dashboard.index', compact('reports', 'stats', 'modules', 'recentEvaluations'));
