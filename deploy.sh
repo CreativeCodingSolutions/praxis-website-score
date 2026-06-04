@@ -1,13 +1,13 @@
 #!/bin/bash
-# Deploy script for CreativeCoding Solutions apps
-# Deploy Praxis Website Score with new lead-generating features
+# Deploy script for Praxis Website Score on VPS
 
 set -e
 
 PROJECT="praxiswebsitescore"
 GITHUB_URL="https://github.com/CreativeCodingSolutions/praxis-website-score.git"
-APP_DIR="/var/www/${PROJECT}"
+APP_DIR="/home/deployer/www/${PROJECT}"
 DYNAMIC_FILE="/docker/traefik/dynamic/dynamic.yml"
+APP_PORT="10001"
 
 echo "=== Deploying ${PROJECT} ==="
 
@@ -34,14 +34,36 @@ sleep 5
 
 # 4. Run Laravel setup
 echo "→ Laravel setup..."
-docker compose exec -T ${PROJECT} php artisan key:generate --force 2>/dev/null || true
-docker compose exec -T ${PROJECT} php artisan config:cache 2>/dev/null || true
-docker compose exec -T ${PROJECT} php artisan route:cache 2>/dev/null || true
-docker compose exec -T ${PROJECT} php artisan view:cache 2>/dev/null || true
-docker compose exec -T ${PROJECT} php artisan migrate --force 2>/dev/null || true
+docker compose exec -T app php artisan key:generate --force 2>/dev/null || true
+docker compose exec -T app php artisan config:cache 2>/dev/null || true
+docker compose exec -T app php artisan route:cache 2>/dev/null || true
+docker compose exec -T app php artisan view:cache 2>/dev/null || true
+docker compose exec -T app php artisan migrate --force 2>/dev/null || true
 
 # 5. Permissions
-docker compose exec -T ${PROJECT} chmod -R 775 storage bootstrap/cache 2>/dev/null || true
+docker compose exec -T app chmod -R 775 storage bootstrap/cache 2>/dev/null || true
+
+# 6. Update Traefik dynamic config
+echo "→ Updating Traefik config..."
+if grep -q "${PROJECT}.creativecoding.cloud" "$DYNAMIC_FILE" 2>/dev/null; then
+    echo "→ Already in Traefik"
+else
+    python3 << PYEOF
+import yaml
+with open("${DYNAMIC_FILE}", "r") as f:
+    config = yaml.safe_load(f)
+config["http"]["services"]["${PROJECT}"] = {"loadBalancer": {"servers": [{"url": "http://localhost:${APP_PORT}"}]}}
+config["http"]["routers"]["${PROJECT}"] = {
+    "rule": "Host(`${PROJECT}.creativecoding.cloud`)",
+    "entryPoints": ["websecure"],
+    "service": "${PROJECT}",
+    "tls": {"certResolver": "letsencrypt"}
+}
+with open("${DYNAMIC_FILE}", "w") as f:
+    yaml.dump(config, f, default_flow_style=False, allow_unicode=True)
+PYEOF
+    docker restart traefik 2>&1 || true
+fi
 
 echo "=== ${PROJECT} deployed! ==="
 echo "→ https://${PROJECT}.creativecoding.cloud"
