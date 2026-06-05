@@ -36,7 +36,7 @@
         <article class="border-b border-gray-200 pb-8">
             <p class="text-sm text-indigo-600 font-medium mb-1">Patientenakquise & Website</p>
             <h2 class="text-xl font-semibold mb-2">
-                <a href="/blog/10-gruende-warum-ihre-praxis-website-patienten-verliert" class="hover:text-indigo-600">10 Gründe warum Ihre Praxis-Website Patienten verliert</a>
+                <a href="/blog/raende-patienten-verliert" class="hover:text-indigo-600">10 Gründe warum Ihre Praxis-Website Patienten verliert</a>
             </h2>
             <p class="text-sm text-gray-400 mb-2">4. Juni 2026 · Lesezeit: 8 Min.</p>
             <p class="text-gray-600">Viele Praxis-Websites verlieren Patienten ohne es zu merken. Wir zeigen 10 häufige Fehler — und wie Sie sie beheben. Mit DACH-Beispielen und SEO-Tipps.</p>
