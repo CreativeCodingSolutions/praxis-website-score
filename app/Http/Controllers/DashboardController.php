@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Models\Lead;
 use App\Models\Report;
 use App\Services\WebsiteScoreService;
 use App\Services\PdfReportService;
@@ -169,5 +170,35 @@ class DashboardController extends Controller
     public function pricing()
     {
         return view('pricing');
+    }
+
+    /**
+     * Leads admin overview
+     */
+    public function leads()
+    {
+        $leads = Lead::with('guestReport')
+            ->orderBy('created_at', 'desc')
+            ->paginate(20);
+
+        $stats = [
+            'total' => Lead::count(),
+            'this_week' => Lead::where('created_at', '>=', now()->subWeek())->count(),
+            'with_report' => Lead::whereNotNull('guest_report_id')->count(),
+            'avg_score' => Lead::whereNotNull('guest_report_id')
+                ->join('guest_reports', 'leads.guest_report_id', '=', 'guest_reports.id')
+                ->avg('guest_reports.overall_score') ?? 0,
+        ];
+
+        return view('dashboard.leads', compact('leads', 'stats'));
+    }
+
+    /**
+     * Delete a lead
+     */
+    public function deleteLead($id)
+    {
+        Lead::where('id', $id)->delete();
+        return redirect()->route('dashboard.leads')->with('success', 'Lead gelöscht.');
     }
 }

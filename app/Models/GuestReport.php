@@ -16,7 +16,7 @@ class GuestReport extends Model
         'category_scores' => 'array',
         'recommendations' => 'array',
         'overall_score' => 'integer',
-        'lead_captured' => 'boolean',
+        'lead_captured' => 'integer',
     ];
 
     public function leads()

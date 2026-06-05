@@ -125,6 +125,9 @@
                     <a href="{{ route('dashboard') }}" class="flex items-center gap-2 text-sm text-gray-600 hover:text-indigo-600">
                         <i class="fa-solid fa-gauge-high w-5 text-center"></i> Dashboard
                     </a>
+                    <a href="{{ route('dashboard.leads') }}" class="flex items-center gap-2 text-sm text-gray-600 hover:text-indigo-600">
+                        <i class="fa-solid fa-users w-5 text-center"></i> Leads
+                    </a>
                     @if(\App\Modules\Affiliate\Module::isEnabled())
                     <a href="{{ route('affiliate.dashboard') }}" class="flex items-center gap-2 text-sm text-gray-600 hover:text-indigo-600">
                         <i class="fa-solid fa-handshake w-5 text-center"></i> Affiliate

@@ -56,6 +56,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/dashboard/check', [DashboardController::class, 'check'])->name('dashboard.check');
     Route::get('/dashboard/report/{report}', [DashboardController::class, 'showReport'])->name('dashboard.report');
     Route::get('/dashboard/report/{report}/pdf', [DashboardController::class, 'downloadPdf'])->name('dashboard.pdf');
+    Route::get('/dashboard/leads', [DashboardController::class, 'leads'])->name('dashboard.leads');
+    Route::delete('/dashboard/leads/{id}', [DashboardController::class, 'deleteLead'])->name('dashboard.leads.delete');
 
     // Stripe
     Route::post('/checkout', [StripeController::class, 'checkout'])->name('stripe.checkout');

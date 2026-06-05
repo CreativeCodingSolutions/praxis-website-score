@@ -52,6 +52,7 @@
             </a>
             <div class="flex items-center gap-4">
                 <a href="{{ route('dashboard') }}" class="text-sm text-gray-600 hover:text-indigo-600">Dashboard</a>
+                <a href="{{ route('dashboard.leads') }}" class="text-sm text-gray-600 hover:text-indigo-600">Leads</a>
                 <a href="{{ route('pricing') }}" class="text-sm text-gray-600 hover:text-indigo-600">Preise</a>
                 @if(\App\Modules\Reporting\Module::isEnabled())
                 <a href="{{ route('reporting.index') }}" class="text-sm text-gray-600 hover:text-indigo-600">Reporting</a>
