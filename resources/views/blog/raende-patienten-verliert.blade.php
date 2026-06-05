@@ -38,7 +38,7 @@
     <nav class="text-sm text-gray-500 mb-8">
         <a href="/" class="hover:text-indigo-600">Startseite</a>
         <span class="mx-2">/</span>
-        <a href="{{ route('blog.index') }}" class="hover:text-indigo-600">Blog</a>
+        <a href="{{ /blog }}" class="hover:text-indigo-600">Blog</a>
         <span class="mx-2">/</span>
         <span class="text-gray-700">10 Gründe warum Ihre Praxis-Website Patienten verliert</span>
     </nav>
@@ -69,7 +69,7 @@
 
             <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">4. Fehlende oder schlechte Kontaktdaten</h2>
             <p>Patienten wollen schnell wissen: Wo ist die Praxis? Wie erreiche ich sie? Welche Telefonnummer habe ich? Wenn diese Informationen versteckt oder unvollständig rufen Sie nicht an.</p>
-            <p><strong>Was Sie tun können:</br> Platzieren Sie Telefonnummer, Adresse und Öffnungszeiten auf jeder Seite — idealerweise im Header. Nutten Sie eine klickbare Telefonnummer für Mobil-Nutzer.</p>
+            <p><strong>Was Sie tun können:</strong> Platzieren Sie Telefonnummer, Adresse und Öffnungszeiten auf jeder Seite — idealerweise im Header. Nutzen Sie eine klickbare Telefonnummer für Mobil-Nutzer.</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">5. Keine Online-Terminbuchung</h2>
             <p>Im Zeitalter von Doctolib und Jameda erwarten Patienten die Möglichkeit, online Termine zu vereinbaren. Wer noch nur anbietet "rufen Sie an", verliere insbesondere jüngere Patienten.</p>
@@ -79,7 +79,7 @@
             <p>In Deutschland, Österreich und der Schweiz ist ein Impressum (und in der EU eine DSGVO-konforme Datenschutzerklärung) gesetzlich vorgeschrieben. Fehlt es, können Sie abgemahnt werden — und Patienten vertrauen weniger.</p>
             <p><strong>Was Sie tun können:</strong> Stellen Sie sicher, dass Impressum und Datenschutzerklärung von jeder Seite erreichbar sind. Die Links gehören in jeden Footer.</p>
 
-            <h2 class="text="text-2xl font-bold text-gray-900 mt-12 mb-4">7. Veraltetes Design</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">7. Veraltetes Design</h2>
             <p>Ein veraltetes Design wirkt unprofessionell. Patienten fragen sich: "Wenn die Website aussieht wie 2008 — wie sieht dann die Behandlung aus?"</p>
             <p><strong>Was Sie tun können:</strong> Sie brauchen kein teures Redesign. Aber: Schriftgrößen vereinheitlichen, ausreichend Leerzeichen nutzen, Farben anpassen und Bilder auf dem neuesten Stand halten. Ein sauberer, minimaler Look schlägt überladene Seiten.</p>
 

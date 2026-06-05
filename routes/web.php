@@ -48,6 +48,13 @@ Route::get('/datenschutz', function () { return view('legal.datenschutz'); })->n
 
 // Blog Route
 Route::get('/blog', function () { return view('blog.index'); })->name('blog.index');
+Route::get('/blog/{slug}', function ($slug) {
+    $view = 'blog.' . $slug;
+    if (view()->exists($view)) {
+        return view($view);
+    }
+    abort(404);
+})->name('blog.show');
 
 // Dashboard
 Route::middleware(['auth', 'verified'])->group(function () {

@@ -17,6 +17,11 @@
     <meta property="og:url" content="@yield('og_url', url()->current())">
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="Praxis Website Score">
+    <meta property="og:image" content="https://praxiswebsitescore.creativecoding.cloud/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Praxis Website Score — Kostenloser Website-Check für Praxen in DACH">
+    <meta name="twitter:card" content="summary_large_image">
     @yield('og_tags')
 
     <!-- Schema.org Organization -->
@@ -27,11 +32,13 @@
         "name": "CreativeCodingSolutions",
         "url": "https://creativecoding.cloud",
         "logo": "https://creativecoding.cloud/logo.png",
-        "sameAs": [],
+        "sameAs": [
+            "https://github.com/creativecoding"
+        ],
         "contactPoint": {
             "@type": "ContactPoint",
             "contactType": "customer service",
-            "availableLanguage": "German"
+            "availableLanguage": ["German", "English"]
         }
     }
     </script>

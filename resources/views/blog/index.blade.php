@@ -36,7 +36,7 @@
         <article class="border-b border-gray-200 pb-8">
             <p class="text-sm text-indigo-600 font-medium mb-1">Patientenakquise & Website</p>
             <h2 class="text-xl font-semibold mb-2">
-                <a href="{{ route('blog.show', '10-gruende-warum-ihre-praxis-website-patienten-verliert') }}" class="hover:text-indigo-600">10 Gründe warum Ihre Praxis-Website Patienten verliert</a>
+                <a href="/blog/10-gruende-warum-ihre-praxis-website-patienten-verliert" class="hover:text-indigo-600">10 Gründe warum Ihre Praxis-Website Patienten verliert</a>
             </h2>
             <p class="text-sm text-gray-400 mb-2">4. Juni 2026 · Lesezeit: 8 Min.</p>
             <p class="text-gray-600">Viele Praxis-Websites verlieren Patienten ohne es zu merken. Wir zeigen 10 häufige Fehler — und wie Sie sie beheben. Mit DACH-Beispielen und SEO-Tipps.</p>
@@ -46,7 +46,7 @@
         <article class="border-b border-gray-200 pb-8">
             <p class="text-sm text-indigo-600 font-medium mb-1">Webdesign & Best Practices</p>
             <h2 class="text-xl font-semibold mb-2">
-                <a href="{{ route('blog.show', 'website-check-professionelle-praxis-seiten') }}" class="hover:text-indigo-600">Website-Check: So sehen professionelle Praxis-Seiten aus</a>
+                <a href="/blog/website-check-so-sehen-professionelle-praxis-seiten-aus" class="hover:text-indigo-600">Website-Check: So sehen professionelle Praxis-Seiten aus</a>
             </h2>
             <p class="text-sm text-gray-400 mb-2">4. Juni 2026 · Lesezeit: 7 Min.</p>
             <p class="text-gray-600">Was macht eine professionelle Praxis-Website aus? Wir analysieren die Merkmale erfolgreicher Arzt-, Zahnarzt- und Therapeuten-Websites mit DACH-Beispielen und Checklisten.</p>
@@ -56,7 +56,7 @@
         <article class="border-b border-gray-200 pb-8">
             <p class="text-sm text-indigo-600 font-medium mb-1">SEO & Google-Sichtbarkeit</p>
             <h2 class="text-xl font-semibold mb-2">
-                <a href="{{ route('blog.show', 'seo-fuer-aerzte-und-therapeuten') }}" class="hover:text-indigo-600">SEO für Ärzte und Therapeuten — Leitfaden 2026</a>
+                <a href="/blog/seo-fuer-aerzte-und-therapeuten-leitfaden-2026" class="hover:text-indigo-600">SEO für Ärzte und Therapeuten — Leitfaden 2026</a>
             </h2>
             <p class="text-sm text-gray-400 mb-2">4. Juni 2026 · Lesezeit: 10 Min.</p>
             <p class="text-gray-600">SEO-Leitfaden für Ärzte, Zahnärzte und Therapeuten: So werden Sie auf Google in Deutschland, Österreich und Schweiz gefunden. Lokale SEO, On-Page-Optimierung und Google My Business.</p>

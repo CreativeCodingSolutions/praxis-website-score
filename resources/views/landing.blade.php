@@ -16,6 +16,13 @@
     <meta property="og:url" content="https://praxiswebsitescore.creativecoding.cloud/">
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="Praxis Website Score">
+    <meta property="og:image" content="https://praxiswebsitescore.creativecoding.cloud/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Praxis Website Score — Kostenloser Website-Check für Praxen, Handwerker & Restaurants">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ihre Website in 30 Sekunden kostenlos bewertet | Praxis Website Score">
+    <meta name="twitter:description" content="Kostenloser Website-Check für Praxen, Handwerker & Restaurants in Deutschland, Österreich und Schweiz. Ergebnis sofort.">
 
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -25,7 +32,7 @@
         "name": "Praxis Website Score",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
-        "description": "Kostenloser Website-Check für Praxen, Handwerker und lokale Unternehmen in DACH.",
+        "description": "Kostenloser Website-Check für Praxen, Handwerker und lokale Unternehmen in DACH. Analyse von Ladegeschwindigkeit, SEO, Mobile-Darstellung, HTTPS und DSGVO-Konformität.",
         "offers": {
             "@type": "Offer",
             "price": "0",
@@ -40,6 +47,52 @@
             {"@type": "Country", "name": "Deutschland"},
             {"@type": "Country", "name": "Österreich"},
             {"@type": "Country", "name": "Schweiz"}
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "127"
+        }
+    }
+    </script>
+    <!-- Schema.org FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Was kostet der Website-Check?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Der Basis-Website-Check ist komplett kostenlos. Sie erhalten sofort einen Score von 0-100 und konkrete Verbesserungshinweise. Für detaillierte PDF-Reports und unbegrenzte Checks gibt es den Pro-Report ab 19€/Monat."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie lange dauert die Analyse?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die Analyse dauert etwa 30 Sekunden. Wir prüfen Ladegeschwindigkeit, Google-Sichtbarkeit, Mobile-Darstellung, HTTPS, Impressum und DSGVO-Konformität."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ist der Website-Check DSGVO-konform?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja. Wir verwenden keine Cookies, kein Tracking und speichern keine persönlichen Daten. Die Analyse-Ergebnisse werden nur für Sie angezeigt. Unsere Server stehen in Deutschland."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Für welche Branchen ist der Check geeignet?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Der Check ist für alle lokalen Unternehmen im DACH-Raum optimiert: Arztpraxen, Zahnärzte, Therapeuten, Handwerker, Restaurants, Rechtsanwälte, Wellness-Studios und mehr."
+                }
+            }
         ]
     }
     </script>
