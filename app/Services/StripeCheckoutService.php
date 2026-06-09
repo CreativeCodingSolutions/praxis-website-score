@@ -11,11 +11,24 @@ use Illuminate\Support\Facades\Log;
 
 class StripeCheckoutService
 {
-    protected StripeClient $stripe;
+    protected ?StripeClient $stripe = null;
 
     public function __construct()
     {
-        $this->stripe = new StripeClient(config('stripe.secret'));
+        // StripeClient is initialized lazily to avoid crashes when
+        // no API key is configured (e.g. staging / empty .env)
+    }
+
+    protected function getStripe(): StripeClient
+    {
+        if ($this->stripe === null) {
+            $secret = config('stripe.secret');
+            if (empty($secret)) {
+                throw new \RuntimeException('Stripe secret key is not configured. Set STRIPE_SECRET in .env.');
+            }
+            $this->stripe = new StripeClient($secret);
+        }
+        return $this->stripe;
     }
 
     /**
@@ -76,7 +89,7 @@ class StripeCheckoutService
             unset($params['customer_email']);
         }
 
-        return $this->stripe->checkout->sessions->create($params);
+        return $this->getStripe()->checkout->sessions->create($params);
     }
 
     /**
@@ -84,7 +97,7 @@ class StripeCheckoutService
      */
     public function retrieveSession(string $sessionId, array $expand = []): CheckoutSession
     {
-        return $this->stripe->checkout->sessions->retrieve($sessionId, [
+        return $this->getStripe()->checkout->sessions->retrieve($sessionId, [
             'expand' => array_merge(['subscription'], $expand),
         ]);
     }
@@ -220,13 +233,13 @@ class StripeCheckoutService
             return;
         }
 
-        $subscriptions = $this->stripe->subscriptions->all([
+        $subscriptions = $this->getStripe()->subscriptions->all([
             'customer' => $user->stripe_id,
             'status' => 'active',
         ]);
 
         foreach ($subscriptions->data as $subscription) {
-            $this->stripe->subscriptions->cancel($subscription->id);
+            $this->getStripe()->subscriptions->cancel($subscription->id);
         }
 
         $user->update([
@@ -243,14 +256,14 @@ class StripeCheckoutService
     {
         if (!$user->stripe_id) {
             // Create customer first
-            $customer = $this->stripe->customers->create([
+            $customer = $this->getStripe()->customers->create([
                 'email' => $user->email,
                 'name' => $user->name,
             ]);
             $user->update(['stripe_id' => $customer->id]);
         }
 
-        return $this->stripe->billingPortal->sessions->create([
+        return $this->getStripe()->billingPortal->sessions->create([
             'customer' => $user->stripe_id,
             'return_url' => $returnUrl,
         ]);
