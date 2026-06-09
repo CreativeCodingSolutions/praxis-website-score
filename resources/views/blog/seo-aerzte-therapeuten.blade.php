@@ -38,7 +38,7 @@
     <nav class="text-sm text-gray-500 mb-8">
         <a href="/" class="hover:text-indigo-600">Startseite</a>
         <span class="mx-2">/</span>
-        <a href="{{ /blog }}" class="hover:text-indigo-600">Blog</a>
+        <a href="{{ route('blog.index') }}" class="hover:text-indigo-600">Blog</a>
         <span class="mx-2">/</span>
         <span class="text-gray-700">SEO für Ärzte und Therapeuten — Leitfaden 2026</span>
     </nav>
@@ -201,11 +201,11 @@
     <div class="mt-12 border-t border-gray-200 pt-8">
         <h3 class="text-lg font-semibold text-gray-900 mb-4">Weitere Artikel</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <a href="{{ /blog/raende-patienten-verliert }}" class="block border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition">
+            <a href="{{ route('blog.show', 'raende-patienten-verliert') }}" class="block border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition">
                 <p class="text-sm font-medium text-gray-900">10 Gründe warum Ihre Praxis-Website Patienten verliert</p>
                 <p class="text-xs text-gray-500 mt-1">Patientenakquise & Website</p>
             </a>
-            <a href="{{ /blog/professionelle-praxis-seiten }}" class="block border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition">
+            <a href="{{ route('blog.show', 'professionelle-praxis-seiten') }}" class="block border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition">
                 <p class="text-sm font-medium text-gray-900">Website-Check: So sehen professionelle Praxis-Seiten aus</p>
                 <p class="text-xs text-gray-500 mt-1">Webdesign & Best Practices</p>
             </a>

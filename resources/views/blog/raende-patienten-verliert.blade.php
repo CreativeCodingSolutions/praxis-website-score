@@ -38,7 +38,7 @@
     <nav class="text-sm text-gray-500 mb-8">
         <a href="/" class="hover:text-indigo-600">Startseite</a>
         <span class="mx-2">/</span>
-        <a href="{{ /blog }}" class="hover:text-indigo-600">Blog</a>
+        <a href="{{ route('blog.index') }}" class="hover:text-indigo-600">Blog</a>
         <span class="mx-2">/</span>
         <span class="text-gray-700">10 Gründe warum Ihre Praxis-Website Patienten verliert</span>
     </nav>
