@@ -65,7 +65,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Stripe
     Route::post('/checkout', [StripeController::class, 'checkout'])->name('stripe.checkout');
     Route::get('/checkout/success', [StripeController::class, 'success'])->name('stripe.success');
-    Route::post('/subscription/cancel', [StripeController::class, 'cancel'])->name('stripe.cancel');
+    Route::post('/subscription/cancel', [StripeController::class, 'subscriptionCancel'])->name('stripe.cancel');
 });
 
 // Stripe Webhook (no CSRF)
