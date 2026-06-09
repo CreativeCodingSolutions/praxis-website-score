@@ -42,10 +42,6 @@ Route::get('/email/verify', [\App\Http\Controllers\Auth\VerificationController::
 Route::get('/email/verify/{id}/{hash}', [\App\Http\Controllers\Auth\VerificationController::class, 'verify'])->name('verification.verify');
 Route::post('/email/resend', [\App\Http\Controllers\Auth\VerificationController::class, 'resend'])->name('verification.send');
 
-// Legal Pages
-Route::get('/impressum', function () { return view('legal.impressum'); })->name('legal.impressum');
-Route::get('/datenschutz', function () { return view('legal.datenschutz'); })->name('legal.datenschutz');
-
 // Blog Route
 Route::get('/blog', function () { return view('blog.index'); })->name('blog.index');
 Route::get('/blog/{slug}', function ($slug) {
@@ -76,8 +72,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::post('/webhook/stripe', [StripeController::class, 'webhook'])->name('stripe.webhook');
 
 // Module Loader - loads routes from modules with feature flags enabled
-$modules = glob(base_path('app/Modules/*/routes.php'));
-// Module Loader
 $modules = glob(base_path('app/Modules/*/routes.php'));
 foreach ($modules as $routes) {
     $moduleName = basename(dirname($routes));
