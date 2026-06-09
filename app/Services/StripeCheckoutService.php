@@ -61,6 +61,12 @@ class StripeCheckoutService
                     'user_id' => $user->id,
                     'plan' => $plan,
                 ],
+                'trial_period_days' => 7,
+                'trial_settings' => [
+                    'end_behavior' => [
+                        'missing_payment_method' => 'cancel',
+                    ],
+                ],
             ],
         ];
 
@@ -103,6 +109,9 @@ class StripeCheckoutService
             'stripe_id' => $subscription->customer,
             'stripe_status' => $subscription->status,
             'plan' => $session->metadata->plan ?? 'pro',
+            'trial_ends_at' => $subscription->trial_end
+                ? \Carbon\Carbon::createFromTimestamp($subscription->trial_end)
+                : null,
             'plan_ends_at' => $subscription->current_period_end
                 ? \Carbon\Carbon::createFromTimestamp($subscription->current_period_end)
                 : null,
@@ -163,6 +172,9 @@ class StripeCheckoutService
             $user->update([
                 'plan' => $plan,
                 'stripe_status' => $subscription->status,
+                'trial_ends_at' => $subscription->trial_end
+                    ? \Carbon\Carbon::createFromTimestamp($subscription->trial_end)
+                    : null,
                 'plan_ends_at' => $subscription->current_period_end
                     ? \Carbon\Carbon::createFromTimestamp($subscription->current_period_end)
                     : null,
@@ -171,6 +183,7 @@ class StripeCheckoutService
             $user->update([
                 'plan' => 'free',
                 'stripe_status' => $subscription->status,
+                'trial_ends_at' => null,
                 'plan_ends_at' => null,
             ]);
         }

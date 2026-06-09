@@ -11,16 +11,24 @@ class Subscription extends Model
 
     protected $fillable = [
         'user_id',
+        'stripe_id',
+        'stripe_price',
         'plan',
-        'reports_limit',
-        'reports_used',
-        'valid_until',
+        'stripe_status',
+        'quantity',
+        'trial_ends_at',
+        'current_period_start',
+        'current_period_end',
+        'ends_at',
     ];
 
     protected function casts(): array
     {
         return [
-            'valid_until' => 'datetime',
+            'trial_ends_at' => 'datetime',
+            'current_period_start' => 'datetime',
+            'current_period_end' => 'datetime',
+            'ends_at' => 'datetime',
         ];
     }
 
@@ -29,9 +37,21 @@ class Subscription extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function isValid(): bool
+    public function isActive(): bool
     {
-        return $this->valid_until === null || $this->valid_until->isFuture();
+        return in_array($this->stripe_status, ['active', 'trialing'])
+            && ($this->ends_at === null || $this->ends_at->isFuture());
+    }
+
+    public function isTrialing(): bool
+    {
+        return $this->stripe_status === 'trialing'
+            && ($this->trial_ends_at === null || $this->trial_ends_at->isFuture());
+    }
+
+    public function isCancelled(): bool
+    {
+        return $this->ends_at !== null && $this->ends_at->isFuture();
     }
 
     public function getPlanLabelAttribute(): string
@@ -50,12 +70,5 @@ class Subscription extends Model
             'business' => 49,
             default => 0,
         };
-    }
-
-    public function incrementUsage(): void
-    {
-        if ($this->reports_limit > 0) {
-            $this->increment('reports_used');
-        }
     }
 }

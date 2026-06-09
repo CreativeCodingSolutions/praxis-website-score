@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 
 class User extends Authenticatable implements MustVerifyEmail
 {
@@ -15,6 +15,11 @@ class User extends Authenticatable implements MustVerifyEmail
         'name',
         'email',
         'password',
+        'stripe_id',
+        'stripe_status',
+        'plan',
+        'trial_ends_at',
+        'plan_ends_at',
     ];
 
     protected $hidden = [
@@ -27,6 +32,8 @@ class User extends Authenticatable implements MustVerifyEmail
         return [
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
+            'trial_ends_at' => 'datetime',
+            'plan_ends_at' => 'datetime',
         ];
     }
 
@@ -40,9 +47,32 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasOne(Subscription::class);
     }
 
-    public function getPlanAttribute(): string
+    public function subscriptions()
     {
-        return $this->subscription?->plan ?? 'free';
+        return $this->hasMany(Subscription::class);
+    }
+
+    public function activeSubscription(): ?Subscription
+    {
+        return $this->subscriptions()
+            ->whereIn('stripe_status', ['active', 'trialing'])
+            ->where(function ($q) {
+                $q->whereNull('ends_at')->orWhere('ends_at', '>', now());
+            })
+            ->latest('current_period_end')
+            ->first();
+    }
+
+    public function isPro(): bool
+    {
+        return in_array($this->plan, ['pro', 'business']) &&
+               ($this->plan_ends_at === null || $this->plan_ends_at->isFuture());
+    }
+
+    public function isBusiness(): bool
+    {
+        return $this->plan === 'business' &&
+               ($this->plan_ends_at === null || $this->plan_ends_at->isFuture());
     }
 
     public function getReportsLimitAttribute(): int
