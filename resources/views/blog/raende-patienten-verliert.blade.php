@@ -64,7 +64,7 @@
             <p><strong>Was Sie tun können:</strong> Erstellen Sie für jede Seite einen einzigartigen Meta-Titel mit Ihrer Branche und Ort, z.B. "Zahnarztpraxis Dr. Müller — München, Bayern". Nutzen Sie Google My Business für lokale Sichtbarkeit.</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">3. Die Seite ist nicht mobilfreundlich</h2>
-            <p>Über 60% aller Gesundheitssuchen erfolgen auf dem Smartphone. Wenn Ihre Website auf dem Handy nicht gut aussieht — zu kleine Buttons, verschlungener Text, zu scrollende Tabellen — verlieren Sie die meisten Besucher.</p>
+            <p>Über 60% aller Gesundheitssuchen erfolgen auf dem Smartphone (Quelle: <a href="https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/healthcare-search-behavior/" class="text-indigo-600 hover:underline" target="_blank" rel="noopener">Google Think Insights, 2023</a>). Wenn Ihre Website auf dem Handy nicht gut aussieht — zu kleine Buttons, verschlungener Text, zu scrollende Tabellen — verlieren Sie die meisten Besucher.</p>
             <p><strong>Was Sie tun können:</strong> Testen Sie Ihre Website auf verschiedenen Geräten. Jeder wichtige Button (Termin anrufen, Routenplaner, Online-Buchung) sollte mit einer Berührung erreichbar sein.</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">4. Fehlende oder schlechte Kontaktdaten</h2>

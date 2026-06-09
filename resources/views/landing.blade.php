@@ -192,7 +192,7 @@
                         <i class="fa-solid fa-gauge-high text-orange-500"></i>
                     </div>
                     <h3 class="font-semibold text-gray-900 mb-2">Die Seite lädt zu langsam</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">Jede Sekunde Ladezeit kostet Sie Besucher. Gerade auf dem Handy, wo über 60% aller lokalen Suchen stattfinden, muss eine Seite in unter 3 Sekunden laden.</p>
+                    <p class="text-sm text-gray-600 leading-relaxed">Jede Sekunde Ladezeit kostet Sie Besucher. Gerade auf dem Handy, wo viele lokale Suchen stattfinden, muss eine Seite in unter 3 Sekunden laden.</p>
                 </div>
                 <div class="bg-gray-50 rounded-lg p-6">
                     <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
