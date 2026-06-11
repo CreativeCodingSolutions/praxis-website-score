@@ -48,11 +48,6 @@
             {"@type": "Country", "name": "Österreich"},
             {"@type": "Country", "name": "Schweiz"}
         ],
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "ratingCount": "127"
-        }
     }
     </script>
     <!-- Schema.org FAQ -->
