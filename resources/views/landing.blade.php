@@ -107,7 +107,7 @@
                 Wir verwenden keine Cookies und tracken Sie nicht. Diese Website speichert nur Ihre Analyse-Ergebnisse.
                 <a href="/datenschutz" class="underline hover:no-underline text-indigo-400">Datenschutzerklärung</a>
             </p>
-            <button onclick="document.getElementById('cookie-banner').classList.remove('show')"
+            <button id="cookie-accept-btn"
                     class="bg-indigo-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-indigo-700 transition whitespace-nowrap">
                 Verstanden
             </button>
@@ -412,10 +412,25 @@
     </footer>
 
     <script>
-        // Show cookie banner after 1s
-        setTimeout(function() {
-            document.getElementById('cookie-banner').classList.add('show');
-        }, 1000);
+        (function() {
+            var STORAGE_KEY = 'praxis_cookie_consent';
+            var banner = document.getElementById('cookie-banner');
+            // Only show banner if no consent decision stored
+            var existing = localStorage.getItem(STORAGE_KEY);
+            if (!existing && banner) {
+                setTimeout(function() {
+                    banner.classList.add('show');
+                }, 1000);
+            }
+            // Persist consent on button click
+            var acceptBtn = document.getElementById('cookie-accept-btn');
+            if (acceptBtn) {
+                acceptBtn.addEventListener('click', function() {
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify({ consent: true, essential: true, timestamp: new Date().toISOString() }));
+                    if (banner) banner.classList.remove('show');
+                });
+            }
+        })();
     </script>
 </body>
 </html>

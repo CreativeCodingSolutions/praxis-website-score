@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GuestScoreController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\StripeController;
 
 // Public
@@ -42,15 +43,9 @@ Route::get('/email/verify', [\App\Http\Controllers\Auth\VerificationController::
 Route::get('/email/verify/{id}/{hash}', [\App\Http\Controllers\Auth\VerificationController::class, 'verify'])->name('verification.verify');
 Route::post('/email/resend', [\App\Http\Controllers\Auth\VerificationController::class, 'resend'])->name('verification.send');
 
-// Blog Route
-Route::get('/blog', function () { return view('blog.index'); })->name('blog.index');
-Route::get('/blog/{slug}', function ($slug) {
-    $view = 'blog.' . $slug;
-    if (view()->exists($view)) {
-        return view($view);
-    }
-    abort(404);
-})->name('blog.show');
+// Blog Routes
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 // Dashboard
 Route::middleware(['auth', 'verified'])->group(function () {
