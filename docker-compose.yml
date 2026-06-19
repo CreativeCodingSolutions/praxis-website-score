@@ -12,6 +12,7 @@ services:
       - APP_ENV=production
       - APP_DEBUG=false
       - APP_URL=https://praxiswebsitescore.creativecoding.cloud
+      - APP_KEY=base64:xHO8BLRp7mCsnskoMEGrF1Jmo/TH2gAFbVnTOAvmZyk=
       - TRUSTED_PROXIES=*
       - DB_CONNECTION=sqlite
       - DB_DATABASE=/var/www/database/database.sqlite
