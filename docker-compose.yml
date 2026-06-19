@@ -8,6 +8,17 @@ services:
     restart: unless-stopped
     ports:
       - "10003:10000"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.praxiswebsitescore.rule=Host(`praxiswebsitescore.creativecoding.cloud`)"
+      - "traefik.http.routers.praxiswebsitescore.entrypoints=websecure"
+      - "traefik.http.routers.praxiswebsitescore.tls.certresolver=letsencrypt"
+      - "traefik.http.services.praxiswebsitescore.loadbalancer.server.port=10000"
+      # HTTP → HTTPS Redirect
+      - "traefik.http.routers.praxiswebsitescore-http.rule=Host(`praxiswebsitescore.creativecoding.cloud`)"
+      - "traefik.http.routers.praxiswebsitescore-http.entrypoints=web"
+      - "traefik.http.routers.praxiswebsitescore-http.middlewares=redirect-to-https-pws"
+      - "traefik.http.middlewares.redirect-to-https-pws.redirectscheme.scheme=https"
     environment:
       - APP_ENV=production
       - APP_DEBUG=false
