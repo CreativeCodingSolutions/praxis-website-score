@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\GuestReport;
 use App\Models\Lead;
+use App\Notifications\LeadVerificationEmail;
 use App\Services\WebsiteScoreService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -29,7 +30,12 @@ class GuestScoreController extends Controller
         // If user has unlocked (submitted email), show full report
         $unlocked = session()->has('guest_report_unlocked_' . $uuid);
 
-        return view('guest.show', compact('data', 'report', 'unlocked', 'uuid'));
+        // Check if there is a verified lead for this report
+        $verifiedLead = Lead::where('guest_report_id', $report->id)
+            ->whereNotNull('email_verified_at')
+            ->first();
+
+        return view('guest.show', compact('data', 'report', 'unlocked', 'uuid', 'verifiedLead'));
     }
 
     /**
@@ -91,7 +97,7 @@ class GuestScoreController extends Controller
         $report = GuestReport::where('uuid', $uuid)->firstOrFail();
 
         // Save lead with pws_landing source
-        Lead::create([
+        $lead = Lead::create([
             'guest_report_id' => $report->id,
             'email' => $request->input('email'),
             'name' => $request->input('name'),
@@ -101,14 +107,18 @@ class GuestScoreController extends Controller
             'source' => 'pws_landing',
         ]);
 
+        // Double-Opt-In: generate token and send verification email
+        $token = $lead->generateVerificationToken();
+        $lead->notify(new LeadVerificationEmail($token));
+
         // Mark as unlocked in session
         session()->put('guest_report_unlocked_' . $uuid, true);
 
         // Increment lead count on report
         $report->increment('lead_captured');
 
-        return redirect()->route('guest.score.show', $uuid)
-            ->with('success', 'Vielen Dank! Hier ist Ihr detaillierter Report.');
+        return redirect()->route('lead.verification.notice', ['lead_id' => $lead->id])
+            ->with('success', 'Vielen Dank! Wir haben Ihnen einen Verifizierungslink gesendet. Bitte prüfen Sie Ihren Posteingang.');
     }
 
     private function normalizeUrl(string $url): string

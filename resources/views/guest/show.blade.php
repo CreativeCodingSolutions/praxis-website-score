@@ -126,8 +126,8 @@
                 </form>
             </div>
 
-        @else
-            <!-- UNLOCKED: Full detailed report -->
+        @elseif($verifiedLead)
+            <!-- UNLOCKED & VERIFIED: Full detailed report -->
             <div class="space-y-6 mb-10">
                 @foreach($data['categories'] as $key => $cat)
                     @php
@@ -185,6 +185,21 @@
                 <a href="{{ route('pricing') }}" class="inline-block bg-gray-900 text-white px-6 py-2.5 rounded text-sm font-medium hover:bg-gray-800 transition">
                     Pro-Report ansehen — €19/Monat
                 </a>
+            </div>
+        @else
+            <!-- AWAITING VERIFICATION: Lead captured but email not yet verified -->
+            <div class="bg-gray-50 border border-gray-200 rounded-lg p-8 text-center">
+                <h2 class="text-xl font-bold text-gray-900 mb-2">Email bestätigen</h2>
+                <p class="text-gray-600 mb-4 text-sm max-w-md mx-auto">
+                    Wir haben Ihnen einen Verifizierungslink gesendet. Bitte prüfen Sie Ihren Posteingang und bestätigen Sie Ihre Email-Adresse, um den vollständigen Report zu sehen.
+                </p>
+                <form method="POST" action="{{ route('lead.verification.resend') }}" class="max-w-sm mx-auto">
+                    @csrf
+                    <input type="hidden" name="email" value="{{ Lead::where('guest_report_id', $report->id)->latest()->first()->email ?? '' }}">
+                    <button type="submit" class="w-full bg-gray-900 text-white px-6 py-2.5 rounded text-sm font-medium hover:bg-gray-800 transition">
+                        Verifizierungslink erneut senden
+                    </button>
+                </form>
             </div>
         @endif
     </div>

@@ -38,10 +38,15 @@ Route::middleware('guest')->group(function () {
     Route::post('/reset-password', [\App\Http\Controllers\Auth\ForgotPasswordController::class, 'reset'])->name('password.update');
 });
 
-// Email Verification
+// Email Verification (registered users)
 Route::get('/email/verify', [\App\Http\Controllers\Auth\VerificationController::class, 'show'])->name('verification.notice');
 Route::get('/email/verify/{id}/{hash}', [\App\Http\Controllers\Auth\VerificationController::class, 'verify'])->name('verification.verify');
 Route::post('/email/resend', [\App\Http\Controllers\Auth\VerificationController::class, 'resend'])->name('verification.send');
+
+// Lead Email Verification (Double-Opt-In DSGVO)
+Route::get('/lead/verify', [\App\Http\Controllers\Auth\LeadVerificationController::class, 'show'])->name('lead.verification.notice');
+Route::get('/lead/verify/{id}/{hash}', [\App\Http\Controllers\Auth\LeadVerificationController::class, 'verify'])->name('lead.verification.verify')->middleware('signed');
+Route::post('/lead/resend', [\App\Http\Controllers\Auth\LeadVerificationController::class, 'resend'])->name('lead.verification.resend');
 
 // Blog Routes
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
