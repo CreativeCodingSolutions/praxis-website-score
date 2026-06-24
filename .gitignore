@@ -19,5 +19,8 @@ storage/logs/*
 .fleet/
 .secrets.json
 
-# Vendor included for Render deployment
-!vendor/
+# Log files
+*.log
+
+# Vendor
+vendor/
