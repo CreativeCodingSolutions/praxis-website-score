@@ -26,7 +26,7 @@
 
         <!-- Success Banner -->
         <div class="bg-green-50 border border-green-200 text-green-800 rounded-lg p-4 mb-8 text-sm text-center">
-            ✓ Lead erfolgreich gespeichert! Ihr Website-Score wurde erstellt.
+            Lead erfolgreich gespeichert! Ihr Website-Score wurde erstellt.
         </div>
 
         <!-- Score Header -->
@@ -59,7 +59,7 @@
                         'mobile' => 'Mobile-Darstellung',
                         'content' => 'Inhalt & Struktur',
                         'security' => 'Sicherheit',
-                        'design' => 'Design & UX',
+                        'design' => 'Gestaltung',
                     ];
                 @endphp
                 <div class="border border-gray-200 rounded-lg p-4">
