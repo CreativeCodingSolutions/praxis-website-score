@@ -2,7 +2,9 @@ FROM debian:bookworm-slim
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     php8.2-cli php8.2-sqlite3 php8.2-mbstring php8.2-xml php8.2-curl php8.2-zip php8.2-bcmath php8.2-fileinfo php8.2-pgsql \
+    ca-certificates \
     curl \
+    && update-ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
 # Install composer
@@ -22,6 +24,9 @@ RUN mkdir -p storage/framework/views storage/framework/cache storage/framework/s
     && chmod -R 775 storage bootstrap/cache \
     && touch database/database.sqlite 2>/dev/null || true
 
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
 EXPOSE 10000
 
-CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=10000"]
+ENTRYPOINT ["docker-entrypoint.sh"]
