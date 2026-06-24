@@ -7,7 +7,7 @@ PROJECT="praxiswebsitescore"
 GITHUB_URL="https://github.com/CreativeCodingSolutions/praxis-website-score.git"
 APP_DIR="/home/deployer/www/${PROJECT}"
 DYNAMIC_FILE="/docker/traefik/dynamic/dynamic.yml"
-APP_PORT="10001"
+APP_PORT="10000"
 
 echo "=== Deploying ${PROJECT} ==="
 
