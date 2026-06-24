@@ -26,7 +26,7 @@ class LeadVerificationEmail extends Notification implements ShouldQueue
 
     public function toMail($notifiable): MailMessage
     {
-        $verifyUrl = URL::signedRoute('lead.verification.verify', [
+        $verifyUrl = URL::temporarySignedRoute('lead.verification.verify', now()->addHours(24), [
             'id' => $notifiable->id,
             'hash' => $this->token,
         ]);
