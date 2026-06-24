@@ -107,10 +107,16 @@
                 Wir verwenden keine Cookies und tracken Sie nicht. Diese Website speichert nur Ihre Analyse-Ergebnisse.
                 <a href="/datenschutz" class="underline hover:no-underline text-indigo-400">Datenschutzerklärung</a>
             </p>
-            <button id="cookie-accept-btn"
-                    class="bg-indigo-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-indigo-700 transition whitespace-nowrap">
-                Verstanden
-            </button>
+            <div class="flex items-center gap-3 shrink-0">
+                <button id="cookie-decline-btn"
+                        class="bg-gray-700 text-white px-4 py-2 rounded text-sm font-medium hover:bg-gray-600 transition whitespace-nowrap">
+                    Nur notwendige
+                </button>
+                <button id="cookie-accept-btn"
+                        class="bg-indigo-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-indigo-700 transition whitespace-nowrap">
+                    Verstanden
+                </button>
+            </div>
         </div>
     </div>
 
@@ -427,6 +433,13 @@
             if (acceptBtn) {
                 acceptBtn.addEventListener('click', function() {
                     localStorage.setItem(STORAGE_KEY, JSON.stringify({ consent: true, essential: true, timestamp: new Date().toISOString() }));
+                    if (banner) banner.classList.remove('show');
+                });
+            }
+            var declineBtn = document.getElementById('cookie-decline-btn');
+            if (declineBtn) {
+                declineBtn.addEventListener('click', function() {
+                    localStorage.setItem(STORAGE_KEY, JSON.stringify({ consent: false, essential: true, timestamp: new Date().toISOString() }));
                     if (banner) banner.classList.remove('show');
                 });
             }

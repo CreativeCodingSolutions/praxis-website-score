@@ -11,8 +11,8 @@
         <h2 class="text-xl font-semibold mt-8 mb-4">1. Verantwortlicher</h2>
         <p>
             Verantwortlich für die Datenbearbeitung auf dieser Website ist:<br>
-            Karsten Brauner, Musterstraße 123, 1010 Wien, Österreich<br>
-            E-Mail: info@creativecoding.cloud
+            Karsten Brauner, CreativeCoding Solutions eG, 1010 Wien, Österreich<br>
+            E-Mail: office@creativecoding.cloud
         </p>
 
         <h2 class="text-xl font-semibold mt-8 mb-4">2. Erhebung und Speicherung personenbezogener Daten</h2>
@@ -39,14 +39,24 @@
 
         <h2 class="text-xl font-semibold mt-8 mb-4">5. Speicherdauer</h2>
         <p>
-            Personenbezogene Daten werden gelöscht, sobald der Zweck der Speicherung entfällt.
-            Nutzerkonten können jederzeit über die Einstellungen gelöscht werden.
+            Personenbezogene Daten werden nur so lange aufbewahrt, wie es für die Erfüllung der Zwecke erforderlich ist.
+            Konkrete Aufbewahrungsfristen:
+        </p>
+        <ul class="list-disc pl-6 space-y-1">
+            <li><strong>Registrierungsdaten:</strong> Bis zum Widerruf bzw. Löschung des Kontos, spätestens 3 Jahre nach letzter Aktivität.</li>
+            <li><strong>Analyse-Ergebnisse:</strong> 90 Tage nach der jeweiligen Analyse, danach automatische Löschung.</li>
+            <li><strong>Logfiles (IP-Adressen):</strong> 14 Tage, danach werden IP-Adressen anonymisiert oder gelöscht.</li>
+            <li><strong>Cookie-Consent-Einstellungen:</strong> 12 Monate, danach wird erneut abgefragt.</li>
+        </ul>
+        <p>
+            Nach Ablauf der Aufbewahrungsfristen werden die Daten automatisch gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten
+            (z.B. steuerrechtliche Aufbewahrung von 7 Jahren für Buchungsdaten) entgegenstehen.
         </p>
 
         <h2 class="text-xl font-semibold mt-8 mb-4">6. Ihre Rechte</h2>
         <p>
             Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
-            Datenübertragbarkeit und Widerspruch. Kontakt: info@creativecoding.cloud
+            Datenübertragbarkeit und Widerspruch. Kontakt: office@creativecoding.cloud
         </p>
 
         <h2 class="text-xl font-semibold mt-8 mb-4">7. Hosting</h2>
@@ -58,7 +68,7 @@
         <h2 class="text-xl font-semibold mt-8 mb-8">8. Kontakt</h2>
         <p>
             Bei Fragen zum Datenschutz kontaktieren Sie uns unter:<br>
-            E-Mail: info@creativecoding.cloud
+            E-Mail: office@creativecoding.cloud
         </p>
 
         <p class="text-sm text-gray-400 mt-8">Stand: Juni 2026</p>
