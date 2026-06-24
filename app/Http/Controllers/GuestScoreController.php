@@ -90,7 +90,7 @@ class GuestScoreController extends Controller
 
         $report = GuestReport::where('uuid', $uuid)->firstOrFail();
 
-        // Save lead
+        // Save lead with pws_landing source
         Lead::create([
             'guest_report_id' => $report->id,
             'email' => $request->input('email'),
@@ -98,6 +98,7 @@ class GuestScoreController extends Controller
             'ip_address' => $request->ip(),
             'consent_given' => true,
             'consent_text' => 'Datenschutzerklärung akzeptiert am ' . now()->format('d.m.Y H:i'),
+            'source' => 'pws_landing',
         ]);
 
         // Mark as unlocked in session

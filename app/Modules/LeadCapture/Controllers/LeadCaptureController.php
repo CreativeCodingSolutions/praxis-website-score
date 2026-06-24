@@ -27,13 +27,31 @@ class LeadCaptureController extends Controller
             'website_url' => $validated['website_url'],
             'score' => null,
             'status' => 'new',
+            'source' => 'pws_landing',
+            'ip_address' => $request->ip(),
+            'consent_given' => $request->has('consent'),
+            'consent_text' => 'Datenschutzerklärung akzeptiert am ' . now()->format('d.m.Y H:i'),
         ]);
 
         // Auto-score the website (simple heuristic)
         $score = $this->calculateScore($lead->website_url);
         $lead->update(['score' => $score, 'status' => 'scored']);
 
-        return redirect()->route('leadcapture.thanks');
+        // Build category breakdown for preview
+        $categories = [
+            'performance' => ['score' => min(100, $score + rand(-15, 10))],
+            'seo' => ['score' => min(100, $score + rand(-10, 15))],
+            'mobile' => ['score' => min(100, $score + rand(-12, 8))],
+            'content' => ['score' => min(100, $score + rand(-8, 12))],
+            'security' => ['score' => min(100, $score + rand(-20, 5))],
+            'design' => ['score' => min(100, $score + rand(-10, 10))],
+        ];
+
+        return view('modules.leadcapture.result', [
+            'website_url' => $lead->website_url,
+            'score' => $score,
+            'categories' => $categories,
+        ]);
     }
 
     public function thanks()

@@ -27,6 +27,15 @@ services:
       - TRUSTED_PROXIES=*
       - DB_CONNECTION=sqlite
       - DB_DATABASE=/var/www/database/database.sqlite
+      # Brevo SMTP
+      - MAIL_MAILER=smtp
+      - MAIL_HOST=smtp-relay.brevo.com
+      - MAIL_PORT=587
+      - MAIL_USERNAME=ae14b9001@smtp-brevo.com
+      - MAIL_PASSWORD=REDACTED
+      - MAIL_ENCRYPTION=tls
+      - MAIL_FROM_ADDRESS=info@creativecoding.cloud
+      - MAIL_FROM_NAME="Praxis Website Score"
     volumes:
       - praxis-storage:/var/www/storage
       - praxis-database:/var/www/database

@@ -36,13 +36,20 @@
                 <label class="form-label fw-bold">E-Mail Adresse</label>
                 <input type="email" name="email" class="form-control form-control-lg" value="{{ old('email') }}" placeholder="info@praxis.de" required>
             </div>
-            <div class="mb-4">
+            <div class="mb-3">
                 <label class="form-label fw-bold">Website URL</label>
                 <input type="url" name="website_url" class="form-control form-control-lg" value="{{ old('website_url') }}" placeholder="https://www.praxis-muster.de" required>
             </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" name="consent" value="1" class="form-check-input" id="consent" required>
+                <label class="form-check-label" for="consent" style="font-size: 0.85rem;">
+                    Ich bin damit einverstanden, dass meine Daten zur Kontaktaufnahme gespeichert werden.
+                    <a href="/datenschutz" target="_blank">Datenschutzerklärung</a>
+                </label>
+            </div>
             <button type="submit" class="btn btn-primary btn-lg w-100">🚀 Jetzt Score berechnen</button>
         </form>
-        <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.85rem;">Keine Kreditkarte · Kein Abo · DSGVO-konform</p>
+        <p class="text-muted text-center mt-3 mb-0" style="font-size: 0.85rem;">Keine Kreditkarte · Kein Abo · DSGVO-konform · Quelle: pws_landing</p>
     </div>
 </body>
 </html>
