@@ -65,7 +65,13 @@
             Es werden keine Daten an Dritte weitergegeben, es sei denn, dies ist gesetzlich vorgeschrieben.
         </p>
 
-        <h2 class="text-xl font-semibold mt-8 mb-8">8. Kontakt</h2>
+        <h2 class="text-xl font-semibold mt-8 mb-4">8. Online-Streitbeilegung (ODR)</h2>
+        <p>
+            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (ODR) bereit:<br>
+            <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">https://ec.europa.eu/consumers/odr</a>
+        </p>
+
+        <h2 class="text-xl font-semibold mt-8 mb-4">9. Kontakt</h2>
         <p>
             Bei Fragen zum Datenschutz kontaktieren Sie uns unter:<br>
             E-Mail: office@creativecoding.cloud
