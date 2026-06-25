@@ -21,6 +21,7 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Praxis Website Score — Kostenloser Website-Check für Praxen, Handwerker & Restaurants">
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="{{ url('/og-image.png') }}">
     <meta name="twitter:title" content="Ihre Website in 30 Sekunden kostenlos bewertet | Praxis Website Score">
     <meta name="twitter:description" content="Kostenloser Website-Check für Praxen, Handwerker & Restaurants in Deutschland, Österreich und Schweiz. Ergebnis sofort.">
 
