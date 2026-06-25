@@ -23,7 +23,7 @@
 
         <h2 class="text-xl font-semibold mt-8 mb-4">Kontakt</h2>
         <p class="mb-4">
-            E-Mail: office@creativecoding.cloud
+            E-Mail: info@creativecoding.cloud
         </p>
 
         <h2 class="text-xl font-semibold mt-8 mb-4">EU-Streitschlichtung</h2>
