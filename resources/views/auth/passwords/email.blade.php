@@ -10,6 +10,9 @@
             <p class="text-gray-500 mt-2">Gib deine Email ein und erhalte einen Link zum Zurücksetzen.</p>
         </div>
         <div class="bg-white rounded-xl shadow-lg p-8">
+            @if(session('status'))
+                <div class="bg-green-50 border border-green-200 text-green-800 rounded-lg px-4 py-3 mb-4">{{ session('status') }}</div>
+            @endif
             @if(session('success'))
                 <div class="bg-green-50 border border-green-200 text-green-800 rounded-lg px-4 py-3 mb-4">{{ session('success') }}</div>
             @endif

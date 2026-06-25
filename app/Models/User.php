@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Notifications\ResetPassword as ResetPasswordNotification;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -35,6 +36,14 @@ class User extends Authenticatable implements MustVerifyEmail
             'trial_ends_at' => 'datetime',
             'plan_ends_at' => 'datetime',
         ];
+    }
+
+    /**
+     * Override the password reset notification to use our custom branded version.
+     */
+    public function sendPasswordResetNotification($token)
+    {
+        $this->notify(new ResetPasswordNotification($token));
     }
 
     public function reports()
