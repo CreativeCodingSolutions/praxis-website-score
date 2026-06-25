@@ -11,6 +11,7 @@ use App\Http\Controllers\StripeController;
 // Public
 Route::get('/', function () { return view('landing'); })->name('landing');
 Route::get('/pricing', [DashboardController::class, 'pricing'])->name('pricing');
+Route::get('/preise', function () { return redirect('/pricing'); })->name('preise');
 
 // Guest Score — no login required
 Route::post('/check', [GuestScoreController::class, 'analyze'])->name('guest.score.analyze');

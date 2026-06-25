@@ -299,7 +299,7 @@
 
     <!-- Wie es funktioniert -->
     <section id="wie-es-funktioniert" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h2 class="text-2xl font-bold text-gray-900 mb-8">In 3 Schritten zum Website-Score</h2>
+        <h2 class="text-2xl font-bold text-gray-900 mb-8">In drei Schritten zum Website-Score</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
                 <div class="w-10 h-10 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold mb-4">1</div>
