@@ -76,9 +76,9 @@ class WebsiteScoreService
         $checks = [];
         $score = 0;
 
-        // Response time via get_headers
+        // Response time via get_headers (already fetched above)
         $start = microtime(true);
-        @file_get_contents($url, false, stream_context_create(['http' => ['timeout' => 10]]));
+        @get_headers($url);
         $responseTime = (microtime(true) - $start) * 1000;
         if ($responseTime < 500) { $score += 25; $checks[] = ['✓', 'Ladezeit unter 500ms (sehr gut)']; }
         elseif ($responseTime < 1000) { $score += 20; $checks[] = ['✓', 'Ladezeit unter 1s (gut)']; }
@@ -171,12 +171,13 @@ class WebsiteScoreService
         else { $checks[] = ['✗', 'Kein Structured Data — Schema.org empfohlen']; }
 
         // Sitemap
-        $hasSitemap = @file_get_contents(parse_url($canonical ?: '/', PHP_URL_SCHEME) . '://' . parse_url($canonical ?: '/', PHP_URL_HOST) . '/sitemap.xml') !== false;
+        $sitemapUrl = ($canonical ? parse_url($canonical, PHP_URL_SCHEME) . '://' . parse_url($canonical, PHP_URL_HOST) : 'https://' . parse_url($url, PHP_URL_HOST)) . '/sitemap.xml';
+        $hasSitemap = @file_get_contents($sitemapUrl, false, stream_context_create(['http' => ['timeout' => 5]])) !== false;
         if ($hasSitemap) { $score += 5; $checks[] = ['✓', 'XML Sitemap gefunden']; }
         else { $checks[] = ['~', 'Keine XML Sitemap gefunden']; }
 
         // robots.txt
-        $hasRobots = @file_get_contents('https://' . parse_url('/', PHP_URL_HOST) . '/robots.txt') !== false;
+        $hasRobots = @file_get_contents('https://' . parse_url($url, PHP_URL_HOST) . '/robots.txt', false, stream_context_create(['http' => ['timeout' => 5]])) !== false;
         if ($hasRobots) { $score += 5; $checks[] = ['✓', 'robots.txt vorhanden']; }
         else { $checks[] = ['~', 'Keine robots.txt']; }
 
