@@ -24,30 +24,81 @@
     <meta name="twitter:title" content="Ihre Website in 30 Sekunden kostenlos bewertet | Praxis Website Score">
     <meta name="twitter:description" content="Kostenloser Website-Check für Praxen, Handwerker & Restaurants in Deutschland, Österreich und Schweiz. Ergebnis sofort.">
 
-    <!-- Schema.org -->
+    <!-- Schema.org LocalBusiness -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
+        "@type": "LocalBusiness",
         "name": "Praxis Website Score",
-        "applicationCategory": "BusinessApplication",
-        "operatingSystem": "Web",
         "description": "Kostenloser Website-Check für Praxen, Handwerker und lokale Unternehmen in DACH. Analyse von Ladegeschwindigkeit, SEO, Mobile-Darstellung, HTTPS und DSGVO-Konformität.",
-        "offers": {
-            "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "EUR"
-        },
-        "creator": {
-            "@type": "Organization",
-            "name": "CreativeCodingSolutions",
-            "url": "https://creativecoding.cloud"
+        "url": "https://praxiswebsitescore.creativecoding.cloud",
+        "logo": "https://praxiswebsitescore.creativecoding.cloud/og-image.png",
+        "image": "https://praxiswebsitescore.creativecoding.cloud/og-image.png",
+        "priceRange": "€0 - €49",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1010 Wien",
+            "addressLocality": "Wien",
+            "addressRegion": "Wien",
+            "postalCode": "1010",
+            "addressCountry": "AT"
         },
         "areaServed": [
             {"@type": "Country", "name": "Deutschland"},
             {"@type": "Country", "name": "Österreich"},
             {"@type": "Country", "name": "Schweiz"}
         ],
+        "sameAs": [
+            "https://github.com/CreativeCodingSolutions"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Website-Check Pläne",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Kostenloser Basis-Score"
+                    },
+                    "price": "0",
+                    "priceCurrency": "EUR"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Pro-Report"
+                    },
+                    "price": "19",
+                    "priceCurrency": "EUR"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Business Report"
+                    },
+                    "price": "49",
+                    "priceCurrency": "EUR"
+                }
+            ]
+        }
+    }
+    </script>
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Startseite",
+                "item": "https://praxiswebsitescore.creativecoding.cloud/"
+            }
+        ]
     }
     </script>
     <!-- Schema.org FAQ -->

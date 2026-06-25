@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('title', 'AGB | Praxis Website Score')
-@section('meta_description', 'Allgemeine Geschäftsbedingungen von Praxis Website Score.')
+@section('meta_description', 'Allgemeine Geschäftsbedingungen von Praxis Website Score — Nutzungsbedingungen für den kostenlosen Website-Check.')
+@section('meta_keywords', 'AGB, Nutzungsbedingungen, Praxis Website Score, Website Check')
+@section('canonical', 'https://praxiswebsitescore.creativecoding.cloud/agb')
+@section('meta_robots', 'noindex, follow')
 
 @section('content')
 <div class="max-w-4xl mx-auto px-4 py-16">

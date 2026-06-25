@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('title', 'Impressum | Praxis Website Score')
-@section('meta_description', 'Impressum von Praxis Website Score — Automatisierte Website-Analyse für Therapeuten und Praxen.')
+@section('meta_description', 'Impressum von Praxis Website Score — Automatisierte Website-Analyse für Therapeuten und Praxen. CreativeCoding Solutions eG, Wien.')
+@section('meta_keywords', 'Impressum, CreativeCoding Solutions, Praxis Website Score, Kontakt')
+@section('canonical', 'https://praxiswebsitescore.creativecoding.cloud/impressum')
+@section('meta_robots', 'noindex, follow')
 
 @section('content')
 <div class="max-w-4xl mx-auto px-4 py-16">

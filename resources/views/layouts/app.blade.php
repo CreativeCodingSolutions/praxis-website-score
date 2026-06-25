@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Praxis Website Score — Kostenloser Website-Check für Praxen')</title>
     <meta name="description" content="@yield('meta_description', 'Kostenloser Website-Check für Praxen, Handwerker und Restaurants in Deutschland, Österreich und Schweiz. Analyse von Ladegeschwindigkeit, SEO und Mobile-Darstellung.')">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="@yield('meta_robots', 'index, follow')">
     <meta name="theme-color" content="#4F46E5">
     <link rel="canonical" href="@yield('canonical', url()->current())">
-    <meta name="keywords" content="Website check, Praxis website, Website bewertung, SEO check, Website analyse, Arzt website, Handwerker website, DACH">
+    <meta name="keywords" content="@yield('meta_keywords', 'Website check, Praxis website, Website bewertung, SEO check, Website analyse, Arzt website, Handwerker website, DACH')">
 
     <!-- Open Graph -->
     <meta property="og:title" content="@yield('og_title', 'Praxis Website Score — Kostenloser Website-Check für Praxen')">
@@ -43,6 +43,7 @@
     }
     </script>
     @yield('schema')
+    @yield('breadcrumbs')
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">

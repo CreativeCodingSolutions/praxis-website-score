@@ -1,11 +1,37 @@
 @extends('layouts.app')
 @section('title', 'Preise — Praxis Website Score | Kostenlos & Pro ab €19/Monat')
 @section('meta_description', 'Einfache, faire Preise für den Praxis Website Score. Kostenlos starten, Pro-Report ab €19/Monat. Keine versteckten Kosten, monatlich kündbar. DACH-Fokus.')
+@section('meta_keywords', 'Website check preise, SEO tool kostenlos, Website analyse Abo, Praxis Website Score Pro, DACH')
+@section('canonical', 'https://praxiswebsitescore.creativecoding.cloud/pricing')
 
 @section('og_tags')
 <meta property="og:title" content="Preise — Praxis Website Score | Kostenlos & Pro ab €19/Monat">
 <meta property="og:description" content="Einfache, faire Preise. Kostenlos starten, Pro-Report ab €19/Monat. Keine versteckten Kosten.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://praxiswebsitescore.creativecoding.cloud/pricing">
+@endsection
+
+@section('breadcrumbs')
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://praxiswebsitescore.creativecoding.cloud/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Preise",
+            "item": "https://praxiswebsitescore.creativecoding.cloud/pricing"
+        }
+    ]
+}
+</script>
 @endsection
 
 @section('schema')
@@ -15,27 +41,35 @@
     "@type": "Product",
     "name": "Praxis Website Score",
     "description": "Kostenloser Website-Check für Praxen, Handwerker und Restaurants in DACH.",
+    "image": "https://praxiswebsitescore.creativecoding.cloud/og-image.png",
+    "brand": {
+        "@type": "Brand",
+        "name": "Praxis Website Score"
+    },
     "offers": [
         {
             "@type": "Offer",
             "name": "Free",
             "price": "0",
             "priceCurrency": "EUR",
-            "description": "Einmaliger Basis-Score, sofortiges Ergebnis, Verbesserungshinweise"
+            "description": "Einmaliger Basis-Score, sofortiges Ergebnis, Verbesserungshinweise",
+            "availability": "https://schema.org/InStock"
         },
         {
             "@type": "Offer",
             "name": "Pro",
             "price": "19",
             "priceCurrency": "EUR",
-            "description": "30 Analysen/Monat, PDF-Reports, Branchenvergleich"
+            "description": "30 Analysen/Monat, PDF-Reports, Branchenvergleich",
+            "availability": "https://schema.org/InStock"
         },
         {
             "@type": "Offer",
             "name": "Business",
             "price": "49",
             "priceCurrency": "EUR",
-            "description": "Unbegrenzte Analysen, White-Label PDF, API-Zugang"
+            "description": "Unbegrenzte Analysen, White-Label PDF, API-Zugang",
+            "availability": "https://schema.org/InStock"
         }
     ]
 }

@@ -1,7 +1,10 @@
 @extends('layouts.app')
 
 @section('title', 'Datenschutzerklärung | Praxis Website Score')
-@section('meta_description', 'Datenschutzerklärung von Praxis Website Score — Informationen zum Umgang mit personenbezogenen Daten.')
+@section('meta_description', 'Datenschutzerklärung von Praxis Website Score — Informationen zum Umgang mit personenbezogenen Daten. DSGVO-konform.')
+@section('meta_keywords', 'Datenschutz, DSGVO, Praxis Website Score, Datenschutzerklärung')
+@section('canonical', 'https://praxiswebsitescore.creativecoding.cloud/datenschutz')
+@section('meta_robots', 'noindex, follow')
 
 @section('content')
 <div class="max-w-4xl mx-auto px-4 py-16">
