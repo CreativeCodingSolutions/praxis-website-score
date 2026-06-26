@@ -38,7 +38,7 @@
         "priceRange": "€0 - €49",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "1010 Wien",
+            "streetAddress": "{{ env('COMPANY_STREET', 'Musterstraße 123') }}",
             "addressLocality": "Wien",
             "addressRegion": "Wien",
             "postalCode": "1010",

@@ -14,8 +14,8 @@
         <h2 class="text-xl font-semibold mt-8 mb-4">1. Verantwortlicher</h2>
         <p>
             Verantwortlich für die Datenbearbeitung auf dieser Website ist:<br>
-            Karsten Brauner, CreativeCoding Solutions eG, 1010 Wien, Österreich<br>
-            E-Mail: info@creativecoding.cloud
+            {{ env('COMPANY_OWNER', 'Karsten Brauner') }}, {{ env('COMPANY_NAME', 'CreativeCoding Solutions eG') }}, {{ env('COMPANY_STREET', 'Musterstraße 123') }}, {{ env('COMPANY_ZIP', '1010 Wien') }}, {{ env('COMPANY_COUNTRY', 'Österreich') }}<br>
+            E-Mail: {{ env('COMPANY_EMAIL', 'info@creativecoding.cloud') }}
         </p>
 
         <h2 class="text-xl font-semibold mt-8 mb-4">2. Erhebung und Speicherung personenbezogener Daten</h2>
@@ -77,7 +77,7 @@
         <h2 class="text-xl font-semibold mt-8 mb-4">9. Kontakt</h2>
         <p>
             Bei Fragen zum Datenschutz kontaktieren Sie uns unter:<br>
-            E-Mail: info@creativecoding.cloud
+            E-Mail: {{ env('COMPANY_EMAIL', 'info@creativecoding.cloud') }}
         </p>
 
         <p class="text-sm text-gray-400 mt-8">Stand: Juni 2026</p>
