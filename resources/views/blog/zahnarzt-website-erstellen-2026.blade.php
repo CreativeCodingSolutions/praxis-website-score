@@ -85,7 +85,7 @@
             </ul>
 
             <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">5. DSGVO-Konform — vom ersten Tag</h3>
-            <p>Als Arztpraxis haben Sie besondere Pflichten: Datenschutzerklärung, Cookie-Consent, SSL-Zertifikat, sichere Patienten-Formulare.</p>
+            <p>Als Arztpraxis haben Sie besondere Pflichten: Datenschutzerklärung, Cookie-Einwilligung, SSL-Zertifikat, sichere Patienten-Formulare.</p>
             <ul class="list-disc list-inside space-y-1 mt-2">
                 <li><strong>Fehler:</strong> Datenschutzerklärung kopiert von irgendwo, Cookie-Banner fehlt.</li>
                 <li><strong>Lösung:</strong> DSGVO-konforme Basis inkl. Consent-Management ab Tag 1.</li>

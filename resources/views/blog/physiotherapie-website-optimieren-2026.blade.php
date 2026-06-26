@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', 'Physiotherapie-Website optimieren: 5 Quick-Wins für mehr Patienten (2026) | Praxis Website Score Blog')
-@section('meta_description', '5 Quick-Wins für Physiotherapie-Websites: Ladezeit, Online-Buchung, Google Business, Behandlungsschwerpunkte, Mobile-First. Kostenloser Website-Check.')
+@section('title', 'Physiotherapie-Website optimieren: 5 Schnellergebnisse für mehr Patienten (2026) | Praxis Website Score Blog')
+@section('meta_description', '5 Schnellergebnisse für Physiotherapie-Websites: Ladezeit, Online-Buchung, Google Business, Behandlungsschwerpunkte, Mobile-First. Kostenloser Website-Check.')
 @section('og_tags')
-<meta property="og:title" content="Physiotherapie-Website optimieren: 5 Quick-Wins für mehr Patienten (2026)">
-<meta property="og:description" content="5 Quick-Wins für Physiotherapie-Websites: Ladezeit, Online-Buchung, Google Business, Behandlungsschwerpunkte, Mobile-First.">
+<meta property="og:title" content="Physiotherapie-Website optimieren: 5 Schnellergebnisse für mehr Patienten (2026)">
+<meta property="og:description" content="5 Schnellergebnisse für Physiotherapie-Websites: Ladezeit, Online-Buchung, Google Business, Behandlungsschwerpunkte, Mobile-First.">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="de_DE">
 @endsection
@@ -14,8 +14,8 @@
 {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
-    "headline": "Physiotherapie-Website optimieren: 5 Quick-Wins für mehr Patienten (2026)",
-    "description": "5 Quick-Wins für Physiotherapie-Websites: Ladezeit, Online-Buchung, Google Business, Behandlungsschwerpunkte, Mobile-First.",
+    "headline": "Physiotherapie-Website optimieren: 5 Schnellergebnisse für mehr Patienten (2026)",
+    "description": "5 Schnellergebnisse für Physiotherapie-Websites: Ladezeit, Online-Buchung, Google Business, Behandlungsschwerpunkte, Mobile-First.",
     "author": {
         "@type": "Organization",
         "name": "CreativeCoding Solutions"
@@ -44,7 +44,7 @@
 
     <article>
         <p class="text-sm text-indigo-600 font-medium mb-1">Physio Marketing & Webdesign</p>
-        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Physiotherapie-Website optimieren: 5 Quick-Wins für mehr Patienten (2026)</h1>
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Physiotherapie-Website optimieren: 5 Schnellergebnisse für mehr Patienten (2026)</h1>
         <p class="text-sm text-gray-400 mb-8">27. Juni 2026 · Lesezeit: 8 Min.</p>
 
         <div class="prose prose-lg max-w-none text-gray-700">
@@ -59,9 +59,9 @@
 
             <p>Wenn Ihre Website diese 3 Kriterien nicht erfüllt, verlieren Sie Patienten an die Konkurrenz — jeden Tag.</p>
 
-            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">5 Quick-Wins für Ihre Physiotherapie-Website</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">5 Schnellergebnisse für Ihre Physiotherapie-Website</h2>
 
-            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Quick-Win 1: Ladezeit unter 3 Sekunden</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Schnellergebnis 1: Ladezeit unter 3 Sekunden</h3>
             <p><strong>Das Problem:</strong> 78% der Praxiswebsites laden auf dem Handy in über 5 Sekunden. 53% der Besucher brechen ab, wenn es länger als 3 Sekunden dauert.</p>
             <p><strong>Die Lösung:</strong></p>
             <ul class="list-disc list-inside space-y-1 mt-2">
@@ -72,13 +72,13 @@
             </ul>
             <p><strong>Erwartete Wirkung:</strong> -40% Absprungrate, +20% mehr Anrufe/Buchungen</p>
 
-            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Quick-Win 2: Online-Terminbuchung auf der Startseite</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Schnellergebnis 2: Online-Terminbuchung auf der Startseite</h3>
             <p><strong>Das Problem:</strong> Patienten müssen erst anrufen, auflegen, nochmal anrufen — oder auf den Anrufbeantworter sprechen. Frustrierend.</p>
             <p><strong>Die Lösung:</strong> Ein Buchungs-Button, der sofort sichtbar ist. Tools wie Doctolib, Termedia oder einfache Kalender-Widgets funktionieren sofort.</p>
             <p><strong>Platzierung:</strong> Oben rechts (Desktop) oder als Floating-Button (Mobile).</p>
             <p><strong>Erwartete Wirkung:</strong> +35% mehr Termin-Buchungen</p>
 
-            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Quick-Win 3: Google-Business-Profil optimieren</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Schnellergebnis 3: Google-Business-Profil optimieren</h3>
             <p><strong>Das Problem:</strong> Ihr Google-Eintrag hat keine Bilder, keine aktuellen Öffnungszeiten, keine Bewertungs-Antworten.</p>
             <p><strong>Die Lösung:</strong></p>
             <ul class="list-disc list-inside space-y-1 mt-2">
@@ -89,7 +89,7 @@
             </ul>
             <p><strong>Erwartete Wirkung:</strong> +25% mehr Klicks auf „Anrufen" in Google Maps</p>
 
-            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Quick-Win 4: Behandlungsschwerpunkte klar benennen</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Schnellergebnis 4: Behandlungsschwerpunkte klar benennen</h3>
             <p><strong>Das Problem:</strong> „Wir behandeln alles" überzeugt keinen. Patienten suchen nach <strong>ihrem</strong> Problem: „Bandscheibe", „Sportverletzung", „Kiefergelenk".</p>
             <p><strong>Die Lösung:</strong></p>
             <ul class="list-disc list-inside space-y-1 mt-2">
@@ -105,9 +105,9 @@
                 <li>👶 Pädiatrische Physiotherapie</li>
                 <li>💼 Betriebliche Gesundheitsförderung</li>
             </ul>
-            <p><strong>Erwartete Wirkung:</strong> +30% längere Verweildauer, besseres SEO-Ranking</p>
+            <p><strong>Erwartete Wirkung:</strong> +30% längere Verweildauer, bessere Google-Sichtbarkeit</p>
 
-            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Quick-Win 5: Mobile-First — Handy zuerst</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Schnellergebnis 5: Mobile-First — Handy zuerst</h3>
             <p><strong>Das Problem:</strong> Ihre Website sieht am Desktop gut aus, aber auf dem Handy sind Buttons zu klein, Text unlesbar, das Menü unübersichtlich.</p>
             <p><strong>Die Lösung:</strong></p>
             <ul class="list-disc list-inside space-y-1 mt-2">

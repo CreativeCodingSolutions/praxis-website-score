@@ -51,7 +51,7 @@
         <div class="prose prose-lg max-w-none text-gray-700">
             <p class="text-lg leading-relaxed">Die Sommerferien nähern sich — und mit ihnen die schwierigste Zeit für Praxen. Urlaub, Vertretungen, weniger Personal. Aber: Patienten suchen weiterhin online. Wer im Sommer nicht gut aufgestellt ist, verliert wertvolle Neupatienten an besser vorbereitete Konkurrenten.</p>
 
-            <p>Die gute Nachricht: Sie brauchen keinen teuren Relaunch. Mit diesen 10 Punkten auf unserer Sommerferien-Checkliste stellen Sie Ihre Praxiswebsite bis Juli fit — Schritt für Schritt, ohne Stress.</p>
+            <p>Die gute Nachricht: Sie brauchen keine teure Neugestaltung. Mit diesen 10 Punkten auf unserer Sommerferien-Checkliste stellen Sie Ihre Praxiswebsite bis Juli fit — Schritt für Schritt, ohne Stress.</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Checkliste: 10 Punkte für Ihre Praxiswebsite</h2>
 
@@ -62,7 +62,7 @@
                 <li>Vertretungsdaten mit Telefonnummer</li>
                 <li>Hinweis auf Notfallnummern</li>
             </ul>
-            <p><strong>Quick-Win:</strong> Binden Sie eine Banner-Leiste ganz oben ein, die auf der <strong>gesamten</strong> Website sichtbar ist.</p>
+            <p><strong>Schnellergebnis:</strong> Binden Sie eine Banner-Leiste ganz oben ein, die auf der <strong>gesamten</strong> Website sichtbar ist.</p>
 
             <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">2. Online-Buchung für den Herbst aktivieren</h3>
             <p>Die meisten Praxen machen den Fehler, Online-Buchungen während der Ferien zu pausieren. Gegenteil ist der Fall: Nutzen Sie die Zeit, um das System perfekt einzurichten.</p>
@@ -83,7 +83,7 @@
             <p><strong>Häufige Verlangsamungs-Faktoren:</strong></p>
             <ul class="list-disc list-inside space-y-1 mt-2">
                 <li>Unkomprimierte Bilder (vor allem Praxis-Fotos)</li>
-                <li>Zusätzliche Plugins oder Tracking-Skripte</li>
+                <li>Zusätzliche Plugins oder Analyse-Skripte</li>
                 <li>Kein Caching aktiviert</li>
             </ul>
             <p>Ihr kostenloser Praxis Website Score zeigt Ihnen in 30 Sekunden, wo der Schuh drückt: <a href="/" class="text-indigo-600 hover:underline font-medium">Jetzt Website prüfen</a></p>
@@ -114,7 +114,7 @@
                 <li>„Nehmen Sie neue Patienten auf?"</li>
                 <li>„Notfallzeiten und Vertretung?"</li>
             </ul>
-            <p><strong>SEO-Bonus:</strong> Jede gut beantwortete Frage ist eine Chance, bei Google Featured Snippets (Position 0) aufzutauchen.</p>
+            <p><strong>Suchmaschinen-Vorteil:</strong> Jede gut beantwortete Frage ist eine Chance, bei Google Featured Snippets (Position 0) aufzutauchen.</p>
 
             <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">7. Mobile Darstellung testen</h3>
             <p>Über 70% aller Praxis-Websites werden mobil besucht. Prüfen Sie:</p>
@@ -124,9 +124,9 @@
                 <li>Sind die Buttons groß genug (mindestens 48px)?</li>
                 <li>Ist die Schrift ohne Zoomen lesbar?</li>
             </ul>
-            <p><strong>Quick-Test:</strong> Nehmen Sie Ihr eigenes Smartphone und durchlaufen Sie den Buchungsprozess. Wenn Sie sich irgendwo ärgern — Ihre Patienten auch.</p>
+            <p><strong>Schnelltest:</strong> Nehmen Sie Ihr eigenes Smartphone und durchlaufen Sie den Buchungsprozess. Wenn Sie sich irgendwo ärgern — Ihre Patienten auch.</p>
 
-            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">8. Cookie-Consent und Datenschutz aktuell halten</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">8. Cookie-Einwilligung und Datenschutz aktuell halten</h3>
             <p>Die Datenschutzbehörden haben im letzten Jahr erneut auf Consent-basierte Cookie-Banner geprüft. Auch wenn Ihre Praxis keine kommerziellen Cookies nutzt:</p>
             <ul class="list-disc list-inside space-y-1 mt-2">
                 <li>Datenschutzerklärung auf dem aktuellen Stand?</li>
