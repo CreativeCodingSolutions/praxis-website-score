@@ -32,6 +32,36 @@
     <p class="text-gray-500 mb-12">Tipps für bessere Praxis-Websites, mehr Patienten und stärkere Google-Sichtbarkeit im DACH-Raum.</p>
 
     <div class="space-y-8">
+        <!-- Post 7 (NEU) - SEO Longtail -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Physio Marketing <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/physiotherapie-website-optimieren-2026" class="hover:text-indigo-600">Physiotherapie-Website optimieren: 5 Quick-Wins für mehr Patienten</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">27. Juni 2026 · Lesezeit: 8 Min.</p>
+            <p class="text-gray-600">5 Quick-Wins für Physio-Websites: Ladezeit, Online-Buchung, Google Business, Behandlungsschwerpunkte, Mobile-First.</p>
+        </article>
+
+        <!-- Post 6 (NEU) - SEO Longtail -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Zahnarzt Webdesign <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/zahnarzt-website-erstellen-2026" class="hover:text-indigo-600">Zahnarzt-Website erstellen lassen: Was Sie wirklich brauchen (2026)</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">27. Juni 2026 · Lesezeit: 9 Min.</p>
+            <p class="text-gray-600">Was eine gute Zahnarzt-Website enthalten muss: Kontakt, Leistungen, Online-Buchung, Social Proof, DSGVO.</p>
+        </article>
+
+        <!-- Post 5 (NEU) -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Praxis Marketing <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/sommerferien-checkliste-praxiswebsite-2026" class="hover:text-indigo-600">Sommerferien-Checkliste: 10 Dinge, die Ihre Praxiswebsite bis Juli schaffen muss</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">27. Juni 2026 · Lesezeit: 8 Min.</p>
+            <p class="text-gray-600">Die Sommerferien-Checkliste für Praxiswebsites: 10 Punkte, die bis Juli erledigt sein müssen — von Ladegeschwindigkeit über Online-Buchung bis zur Google-Optimierung.</p>
+        </article>
+
         <!-- Post 1 -->
         <article class="border-b border-gray-200 pb-8">
             <p class="text-sm text-indigo-600 font-medium mb-1">Patientenakquise & Website</p>
