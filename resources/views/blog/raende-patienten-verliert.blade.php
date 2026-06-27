@@ -88,7 +88,7 @@
             <p><strong>Was Sie tun können:</strong> Bitten Sie zufriedene Patienten direkt um eine Google-Bewertung. Entwickeln Sie ein System — z.B. zum Zeitpunkt der Abrechnung — das darum bittet.</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">9. Keine Informationen zu den Behandlungen</h2>
-            <p>Patienten suchen oft nach einem konkreten Behandlungsangebot. Wenn Ihre Website keine Informationen zu Ihren Leistungen bietet — oder sie so versteckt, dass man sie kaum findet — verlieren Sie Leads.</p>
+            <p>Patienten suchen oft nach einem konkreten Behandlungsangebot. Wenn Ihre Website keine Informationen zu Ihren Leistungen bietet — oder sie so versteckt, dass man sie kaum findet — verlieren Sie potenzielle Patienten.</p>
             <p><strong>Was Sie tun können:</strong> Erstellen Sie für jede wichtige Behandlung eine eigene Seite mit klaren Informationen. Nutzen Sie einfache Sprache — nicht medizinische Fachbegriffe.</p>
 
             <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">10. Kein HTTPS — keine sichere Verbindung</h2>
