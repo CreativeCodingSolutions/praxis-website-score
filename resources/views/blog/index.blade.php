@@ -32,9 +32,19 @@
     <p class="text-gray-500 mb-12">Tipps für bessere Praxis-Websites, mehr Patienten und stärkere Google-Sichtbarkeit im DACH-Raum.</p>
 
     <div class="space-y-8">
-        <!-- Post 7 (NEU) - SEO Longtail -->
+        <!-- Post 10 (NEU) - Patientenrezensionen -->
         <article class="border-b border-gray-200 pb-8">
-            <p class="text-sm text-indigo-600 font-medium mb-1">Physio Marketing <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <p class="text-sm text-indigo-600 font-medium mb-1">Praxis Marketing <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/patientenrezensionen-google-business-2026" class="hover:text-indigo-600">Patientenrezensionen & Google Business: So gewinnen Sie mehr Praxispatienten durch Bewertungen</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">28. Juni 2026 · Lesezeit: 9 Min.</p>
+            <p class="text-gray-600">93% der Patienten lesen Google-Bewertungen vor der Praxisauswahl. So sammeln Sie systematisch mehr und bessere Bewertungen — DSGVO-konform, kostenlos, mit QR-Code & Follow-Up.</p>
+        </article>
+
+        <!-- Post 7 - SEO Longtail -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Physio Marketing</p>
             <h2 class="text-xl font-semibold mb-2">
                 <a href="/blog/physiotherapie-website-optimieren-2026" class="hover:text-indigo-600">Physiotherapie-Website optimieren: 5 Schnellergebnisse für mehr Patienten</a>
             </h2>
