@@ -32,6 +32,26 @@
     <p class="text-gray-500 mb-12">Tipps für bessere Praxis-Websites, mehr Patienten und stärkere Google-Sichtbarkeit im DACH-Raum.</p>
 
     <div class="space-y-8">
+        <!-- Post 38 (NEU) - Lead-Recherche für Praxen -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Lead-Recherche <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/lead-recherche-fuer-praxen" class="hover:text-indigo-600">Lead-Recherche für Praxen — Der komplette Leitfaden zur Patientenakquise</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">28. Juni 2026 · Lesezeit: 14 Min.</p>
+            <p class="text-gray-600">Der vollständige Leitfaden zur systematischen Patientenakquise: Methoden, Tools, SEO, Google Ads, Bewertungsmanagement und mehr für Ärzte und Therapeuten.</p>
+        </article>
+
+        <!-- Post 37 (NEU) - Lead-Recherche Deutschland 2026 -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Lead-Recherche <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/lead-recherche-deutschland-2026" class="hover:text-indigo-600">Lead-Recherche in Deutschland 2026 — So finden Sie die besten Praxis-Patienten</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">28. Juni 2026 · Lesezeit: 12 Min.</p>
+            <p class="text-gray-600">Lead-Recherche für Praxen in Deutschland: Methoden, Tools und Strategien zur Patientenakquise im Jahr 2026. Von Google Ads über SEO bis zu Patientenlistenerien — was wirklich funktioniert.</p>
+        </article>
+
         <!-- Post 35 (NEU) - Sommer-SEO -->
         <article class="border-b border-gray-200 pb-8">
             <p class="text-sm text-indigo-600 font-medium mb-1">Praxis Website Score <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
