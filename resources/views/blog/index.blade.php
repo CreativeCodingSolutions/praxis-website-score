@@ -32,9 +32,19 @@
     <p class="text-gray-500 mb-12">Tipps für bessere Praxis-Websites, mehr Patienten und stärkere Google-Sichtbarkeit im DACH-Raum.</p>
 
     <div class="space-y-8">
-        <!-- Post 10 (NEU) - Patientenrezensionen -->
+        <!-- Post 35 (NEU) - Sommer-SEO -->
         <article class="border-b border-gray-200 pb-8">
-            <p class="text-sm text-indigo-600 font-medium mb-1">Praxis Marketing <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <p class="text-sm text-indigo-600 font-medium mb-1">Praxis Website Score <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/sommer-seo-google-business-profile-patientengewinnung" class="hover:text-indigo-600">Sommer-SEO für Praxen: Warum Google Business Profile im Juli wichtiger ist als Ihre Website</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">29. Juni 2026 · Lesezeit: 11 Min.</p>
+            <p class="text-gray-600">Der Sommer-Schwund kostet Praxen 30% neue Patienten. Der größte Hebel? Nicht die Website — sondern Google Business Profile. 15-Minuten-Check + 7-Tage-Aktionsplan.</p>
+        </article>
+
+        <!-- Post 10 - Patientenrezensionen -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Praxis Marketing</p>
             <h2 class="text-xl font-semibold mb-2">
                 <a href="/blog/patientenrezensionen-google-business-2026" class="hover:text-indigo-600">Patientenrezensionen & Google Business: So gewinnen Sie mehr Praxispatienten durch Bewertungen</a>
             </h2>
