@@ -1,12 +1,12 @@
 @extends('layouts.app')
 @section('title', 'Preise — Praxis Website Score | Kostenlos & Pro ab €19/Monat')
-@section('meta_description', 'Einfache, faire Preise für den Praxis Website Score. Kostenlos starten, Pro-Report ab €19/Monat. Keine versteckten Kosten, monatlich kündbar. DACH-Fokus.')
+@section('meta_description', 'Einfache, faire Preise für den Praxis Website Score. Jetzt testen, Pro-Report ab €19/Monat. Keine versteckten Kosten, monatlich kündbar. DACH-Fokus.')
 @section('meta_keywords', 'Website check preise, SEO tool kostenlos, Website analyse Abo, Praxis Website Score Pro, DACH')
 @section('canonical', 'https://praxiswebsitescore.creativecoding.cloud/pricing')
 
 @section('og_tags')
 <meta property="og:title" content="Preise — Praxis Website Score | Kostenlos & Pro ab €19/Monat">
-<meta property="og:description" content="Einfache, faire Preise. Kostenlos starten, Pro-Report ab €19/Monat. Keine versteckten Kosten.">
+<meta property="og:description" content="Einfache, faire Preise. Jetzt testen, Pro-Report ab €19/Monat. Keine versteckten Kosten.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://praxiswebsitescore.creativecoding.cloud/pricing">
 @endsection
@@ -94,7 +94,7 @@
                 <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Basis-Score</li>
                 <li class="flex items-center gap-2 text-gray-400"><i class="fa-solid fa-xmark"></i> Kein PDF-Report</li>
             </ul>
-            <a href="/register" class="block text-center py-2.5 border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition">Kostenlos starten</a>
+            <a href="/register" class="block text-center py-2.5 border border-gray-300 rounded-lg font-medium hover:bg-gray-50 transition">Jetzt testen</a>
         </div>
 
         <!-- Pro -->
