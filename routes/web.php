@@ -7,6 +7,8 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\GuestScoreController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\StripeController;
+use App\Http\Controllers\AbTestController;
+use App\Http\Controllers\LeadMagnetsController;
 
 // Public
 Route::get('/', function () { return view('landing'); })->name('landing');
@@ -81,6 +83,17 @@ foreach ($modules as $routes) {
         require $routes;
     }
 }
+
+// A/B Test Routes
+Route::get('/test-ab', [AbTestController::class, 'index'])->name('ab.test');
+Route::post('/test-ab/track', [AbTestController::class, 'trackClick'])->name('ab.track.click');
+Route::post('/test-ab/convert', [AbTestController::class, 'trackConversion'])->name('ab.track.conversion');
+Route::get('/test-ab/dashboard', [AbTestController::class, 'dashboard'])->name('ab.dashboard');
+
+// Lead Magnet Routes
+Route::get('/security-checklist', [LeadMagnetsController::class, 'securityChecklist'])->name('lead-magnets.pws.checklist');
+Route::post('/security-checklist/download', [LeadMagnetsController::class, 'capturePwsEmail'])->name('lead-magnets.pws.capture');
+Route::get('/security-checklist/thanks', [LeadMagnetsController::class, 'thanks'])->name('lead-magnets.pws.thanks');
 
 // Sitemap
 require base_path('routes/sitemap.php');
