@@ -57,7 +57,7 @@
 
             <h2 class="text-2xl font-bold text-gray-900 mt-12 mb-4">Der Sommer-Schwund: Zahlen und Fakten</h2>
 
-            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">Die Daten aus 1.200 Praxen (DACH-Raum, 2024-2025)</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">So stark der Sommer-Schwund wirklich ist</h3>
 
             <div class="overflow-x-auto">
                 <table class="w-full text-sm border-collapse border border-gray-200 my-4">
