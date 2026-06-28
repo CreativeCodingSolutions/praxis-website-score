@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Zahnarzt-Website erstellen lassen: Was Sie wirklich brauchen (2026) | Praxis Website Score Blog')
-@section('meta_description', 'Was eine gute Zahnarzt-Website enthalten muss: Kontakt, Leistungen, Online-Buchung, Social Proof, DSGVO. Kostenloser Website-Check für Zahnarztpraxen.')
+@section('meta_description', 'Zahnarzt Website erstellen: Website Analyse für Zahnarztpraxen mit Online-Buchung, Social Proof & DSGVO. Praxis Website check jetzt kostenlos testen →')
 @section('og_tags')
 <meta property="og:title" content="Zahnarzt-Website erstellen lassen: Was Sie wirklich brauchen (2026)">
 <meta property="og:description" content="Was eine gute Zahnarzt-Website enthalten muss: Kontakt, Leistungen, Online-Buchung, Social Proof, DSGVO.">
@@ -27,6 +27,38 @@
     "datePublished": "2026-06-27",
     "inLanguage": "de-DE",
     "keywords": "Zahnarzt Website erstellen, Zahnarzt Homepage, Zahnarzt Praxis Website, Zahnarzt Website Kosten"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Was kostet eine gute Zahnarzt-Website?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Eine professionelle Zahnarzt-Website kostet zwischen 2.000€ und 8.000€ einmalig, je nach Umfang. monatliche Kosten für Hosting, Wartung und SEO liegen bei 50-200€. Tools wie Praxis Website Score helfen, die wichtigsten Optimierungen gratis zu identifizieren."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Welche Seiten muss eine Zahnarzt-Website haben?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Mindestens: Startseite mit Leistungsüberblick, Übersicht der Behandlungen, Über uns/Team, Kontakt mit Online-Buchung und Google Maps, Impressum, Datenschutzerklärung. Optional: Blog, Patienten-Infobereich, Vorher-Nachher-Galerie."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Brauche ich Online-Terminbuchung auf meiner Zahnarzt-Website?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, Online-Buchung ist 2026 ein Muss. Patienten erwarten 24/7-Buchungsmöglichkeit. Es erhöht Terminbuchungen um 35% und reduziert Anrufe an der Rezeption. Tools wie Doctolib, Termedia oder einfache Widgets lassen sich schnell einbinden."
+            }
+        }
+    ]
 }
 </script>
 @endsection

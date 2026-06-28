@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Wie Praxen durch lokales SEO mehr Patienten gewinnen — Leitfaden KW33 | Praxis Website Score Blog')
-@section('meta_description', 'Lokales SEO für Praxen: So werden Sie bei Google Maps und in den lokalen Suchergebnissen gefunden. Praktische Strategien für Ärzte, Zahnärzte und Therapeuten in DACH.')
+@section('meta_description', 'Lokales SEO Praxis: Google Maps Optimierung für mehr Patienten. Praxis SEO Optimierung für Ärzte, Zahnärzte & Therapeuten — jetzt Score prüfen →')
 @section('og_tags')
 <meta property="og:title" content="Wie Praxen durch lokales SEO mehr Patienten gewinnen — Leitfaden KW33">
 <meta property="og:description" content="Lokales SEO für Praxen: Google Maps, Local Pack, Bewertungen und On-Page-Optimierung für mehr Patienten.">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Sommerferien-Checkliste: 10 Dinge, die Ihre Praxiswebsite bis Juli schaffen muss | Praxis Website Score Blog')
-@section('meta_description', 'Die Sommerferien-Checkliste für Praxiswebsites: 10 Punkte, die bis Juli erledigt sein müssen — von Ladegeschwindigkeit über Online-Buchung bis zur Google-Optimierung.')
+@section('meta_description', 'Praxis Website Vorlage: Sommerferien-Checkliste mit 10 Punkten für Ladegeschwindigkeit, Online-Buchung & Google SEO. Jetzt Website Analyse starten →')
 
 @section('og_tags')
 <meta property="og:title" content="Sommerferien-Checkliste: 10 Dinge, die Ihre Praxiswebsite bis Juli schaffen muss">

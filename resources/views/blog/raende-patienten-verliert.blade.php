@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', '10 Gründe warum Ihre Praxis-Website Patienten verliert | Praxis Website Score Blog')
-@section('meta_description', 'Viele Praxis-Websites verlieren Patienten ohne es zu merken. Wir zeigen 10 häufige Fehler — und wie Sie sie beheben. Mit DACH-Beispielen und SEO-Tipps.')
+@section('meta_description', 'Praxis Website check: 10 Gründe warum Ihre Website Patienten verliert. Website Analyse & SEO Tipps für Praxen DACH — jetzt kostenlos testen →')
 
 @section('og_tags')
 <meta property="og:title" content="10 Gründe warum Ihre Praxis-Website Patienten verliert">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'SEO für Ärzte und Therapeuten — Leitfaden 2026 | Praxis Website Score Blog')
-@section('meta_description', 'SEO-Leitfaden für Ärzte, Zahnärzte und Therapeuten: So werden Sie auf Google in Deutschland, Österreich und Schweiz gefunden. Lokale SEO, On-Page-Optimierung und Google My Business.')
+@section('meta_description', 'Praxis SEO Optimierung: SEO-Leitfaden für Ärzte & Therapeuten 2026. Lokale SEO & Google Business Profile für mehr Patienten — jetzt Score prüfen →')
 
 @section('og_tags')
 <meta property="og:title" content="SEO für Ärzte und Therapeuten — Leitfaden 2026">
@@ -28,6 +28,46 @@
     "datePublished": "2026-06-04",
     "inLanguage": "de-DE",
     "keywords": "SEO Ärzte, SEO Therapeuten, lokale SEO, Google My Business, Praxis SEO, Arzt Google Ranking, DACH SEO 2026"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Was ist lokale SEO für Praxen?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Lokale SEO optimiert Ihre Praxis-Website und Google Business Profile dafür, bei lokalen Suchanfragen wie 'Zahnarzt in München' oder 'Physio Wien' in den Top-Ergebnissen zu erscheinen. Es umfasst Google Business Profile Optimierung, lokale Keywords, NAP-Konsistenz und Bewertungsmanagement."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Wie lange dauert es, bis SEO-Maßnahmen bei einer Arztpraxis Wirkung zeigen?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Erste Verbesserungen in den lokalen Suchergebnissen sind typischerweise nach 4-8 Wochen sichtbar. Google Business Profile Optimierung zeigt oft schon nach 1-2 Wochen Effekte. Vollständige SEO-Ergebnisse benötigen 3-6 Monate kontinuierlicher Arbeit."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Ist Google Business Profile wichtiger als die Website für Praxen?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Beide sind wichtig, aber Google Business Profile hat für lokale Sichtbarkeit oft mehr unmittelbare Wirkung. 46% aller Google-Suchen haben lokale Absicht. Eine optimierte Praxis-Website konvertiert Besucher besser in Patienten. Die Kombination aus beidem ist ideal."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Welche Keywords sollte eine Arztpraxis optimieren?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Fokussieren Sie sich auf lokale Long-Tail-Keywords wie '[Fachrichtung] in [Stadt]', '[Behandlung] [Stadt]' und '[Branche] near me'. Vermeiden Sie generische Keywords wie 'Arzt' — die Konkurrenz ist zu hoch. Arbeiten Sie stattdessen spezifische Leistungs- und Standort-Keywords ein."
+            }
+        }
+    ]
 }
 </script>
 @endsection

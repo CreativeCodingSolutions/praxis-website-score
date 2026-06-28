@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Sommer-SEO für Praxen: Warum Google Business Profile im Juli wichtiger ist als Ihre Website | Praxis Website Score Blog')
-@section('meta_description', 'Der Sommer-Schwund kostet Praxen 30% neue Patienten. Der größte Hebel? Nicht die Website — sondern Google Business Profile. 15-Minuten-Check + 7-Tage-Aktionsplan.')
+@section('meta_description', 'Google Business Profile Praxis: Sommer-SEO für mehr Patientengewinnung. 15-Minuten-Check + 7-Tage-Aktionsplan — jetzt Website Score prüfen →')
 
 @section('og_tags')
 <meta property="og:title" content="Sommer-SEO für Praxen: Warum Google Business Profile im Juli wichtiger ist als Ihre Website">

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Conversion-Optimierung für lokale Dienstleister — Leitfaden 2026 | Praxis Website Score Blog')
-@section('meta_description', 'Conversion-Optimierung für lokale Dienstleister: So wandern Sie Besucher in Kunden um. Call-to-Action, Vertrauenssignale, Landingpages und mehr für Praxen in DACH.')
+@section('meta_description', 'Website Analyse Conversion: Praxis Website Optimierung für mehr Call-to-Action & Patienten. Lokale Dienstleister DACH — jetzt Score prüfen →')
 
 @section('og_tags')
 <meta property="og:title" content="Conversion-Optimierung für lokale Dienstleister — Leitfaden 2026">

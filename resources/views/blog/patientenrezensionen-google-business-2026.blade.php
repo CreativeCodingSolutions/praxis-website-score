@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Patientenrezensionen & Google Business: So gewinnen Sie mehr Praxispatienten durch Bewertungen | Praxis Website Score Blog')
-@section('meta_description', '93% der Patienten lesen Google-Bewertungen vor der Praxisauswahl. So sammeln Sie systematisch mehr und bessere Bewertungen — DSGVO-konform, kostenlos, mit QR-Code & Follow-Up.')
+@section('meta_description', 'Patientengewinnung Praxis durch Google Business Profile Bewertungen. 93% der Patienten lesen Rezensionen — so sammeln Sie mehr, kostenlos Score prüfen →')
 
 @section('og_tags')
 <meta property="og:title" content="Patientenrezensionen & Google Business: So gewinnen Sie mehr Praxispatienten durch Bewertungen">

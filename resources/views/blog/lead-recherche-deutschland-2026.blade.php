@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Lead-Recherche in Deutschland 2026 — So finden Sie die besten Praxis-Patienten | Praxis Website Score Blog')
-@section('meta_description', 'Lead-Recherche für Praxen in Deutschland: Methoden, Tools und Strategien zur Patientenakquise im Jahr 2026. Von Google Ads über SEO bis zu Patientenlistenerien — was wirklich funktioniert.')
+@section('meta_description', 'Lead-Recherche Deutschland 2026: Patientengewinnung Praxis mit Google Ads, SEO & lokaler Website Analyse. Was wirklich funktioniert — kostenlos Score prüfen →')
 
 @section('og_tags')
 <meta property="og:title" content="Lead-Recherche in Deutschland 2026 — So finden Sie die besten Praxis-Patienten">
@@ -165,6 +165,25 @@
             <a href="/blog/seo-aerzte-therapeuten" class="block border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition">
                 <p class="text-sm font-medium text-gray-900">SEO für Ärzte und Therapeuten — Leitfaden 2026</p>
                 <p class="text-xs text-gray-500 mt-1">SEO & Google-Sichtbarkeit</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- Verwandte Artikel (Internal Links) -->
+    <div class="mt-12 border-t border-gray-200 pt-8">
+        <h3 class="text-lg font-semibold text-gray-900 mb-4">Weitere Artikel zum Thema Patientengewinnung</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <a href="/blog/seo-aerzte-therapeuten" class="block border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition">
+                <p class="text-sm font-medium text-gray-900">SEO für Ärzte und Therapeuten — Leitfaden 2026</p>
+                <p class="text-xs text-gray-500 mt-1">Praxis SEO Optimierung</p>
+            </a>
+            <a href="/blog/patientenrezensionen-google-business-2026" class="block border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition">
+                <p class="text-sm font-medium text-gray-900">Patientenrezensionen & Google Business: Bewertungsmanagement</p>
+                <p class="text-xs text-gray-500 mt-1">Google Business Profile Praxis</p>
+            </a>
+            <a href="/blog/sommer-seo-google-business-profile-patientengewinnung" class="block border border-gray-200 rounded-lg p-4 hover:border-indigo-300 transition">
+                <p class="text-sm font-medium text-gray-900">Sommer-SEO für Praxen: Google Business Profile im Fokus</p>
+                <p class="text-xs text-gray-500 mt-1">Patientengewinnung</p>
             </a>
         </div>
     </div>

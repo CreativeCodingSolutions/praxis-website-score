@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Website-Check: So sehen professionelle Praxis-Seiten aus | Praxis Website Score Blog')
-@section('meta_description', 'Was macht eine professionelle Praxis-Website aus? Wir analysieren die Merkmale erfolgreicher Arzt-, Zahnarzt- und Therapeuten-Websites mit DACH-Beispielen und Checklisten.')
+@section('meta_description', 'Praxis Webdesign: Professionelle Praxis Website Analyse mit DACH-Beispielen. Was Teil-, Zahnarzt & Arzt-Websites brauchen — jetzt Website check starten →')
 
 @section('og_tags')
 <meta property="og:title" content="Website-Check: So sehen professionelle Praxis-Seiten aus">

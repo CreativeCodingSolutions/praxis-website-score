@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Blog | Praxis Website Score — Website-Tipps für Praxen in DACH')
-@section('meta_description', 'Blog über Website-Optimierung, SEO, Online-Marketing und Webdesign für Ärzte, Zahnärzte, Therapeuten und Praxen in Deutschland, Österreich und Schweiz.')
+@section('meta_description', 'Praxis SEO Optimierung: Kostenlose Tipps für Website Analyse, Google Business Profile & Patientengewinnung. Praxis Website check jetzt kostenlos testen →')
 
 @section('og_tags')
 <meta property="og:title" content="Blog | Praxis Website Score — Website-Tipps für Praxen in DACH">

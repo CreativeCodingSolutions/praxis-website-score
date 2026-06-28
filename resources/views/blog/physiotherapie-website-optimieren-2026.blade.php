@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('title', 'Physiotherapie-Website optimieren: 5 Schnellergebnisse für mehr Patienten (2026) | Praxis Website Score Blog')
-@section('meta_description', '5 Schnellergebnisse für Physiotherapie-Websites: Ladezeit, Online-Buchung, Google Business, Behandlungsschwerpunkte, Mobile-First. Kostenloser Website-Check.')
+@section('meta_description', 'Physio Website Optimierung: 5 Schnellergebnisse für mehr Patienten. Praxis Website Analyse mit Physio SEO & Online-Buchung — jetzt Score prüfen →')
+
 @section('og_tags')
 <meta property="og:title" content="Physiotherapie-Website optimieren: 5 Schnellergebnisse für mehr Patienten (2026)">
 <meta property="og:description" content="5 Schnellergebnisse für Physiotherapie-Websites: Ladezeit, Online-Buchung, Google Business, Behandlungsschwerpunkte, Mobile-First.">
@@ -27,6 +28,46 @@
     "datePublished": "2026-06-27",
     "inLanguage": "de-DE",
     "keywords": "Physiotherapie Website, Physio Website optimieren, Physiotherapie Homepage, Physio Praxis Website"
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Wie schnell sollte eine Physiotherapie-Website laden?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Eine Physiotherapie-Website sollte in unter 3 Sekunden laden. 53% der Besucher brechen ab, wenn es länger dauert. Komprimieren Sie Bilder (WebP), entfernen Sie unnötige Plugins und aktivieren Sie Caching."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Welche Behandlungsschwerpunkte sollten auf der Physio-Website stehen?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Empfohlen werden 3-5 klar benannte Schwerpunkte wie Manuelle Therapie, Sportphysiotherapie, Kiefergelenksbehandlung, Pädiatrische Physiotherapie und Betriebliche Gesundheitsförderung — jeweils mit 1 Satz und 1 Bild."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Ist Online-Terminbuchung für Physiotherapie-Praxen sinnvoll?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, Online-Terminbuchung kann die Buchungen um +35% steigern. Platzieren Sie einen sichtbaren Buchungs-Button oben rechts (Desktop) oder als Floating-Button (Mobile). Tools wie Doctolib oder Termedia funktionieren sofort."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Brauche ich für Physiotherapie eine Kassenrezept-Info auf der Website?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja. Viele Physio-Patienten kommen auf ärztliche Verordnung. Ihre Website sollte klar folgenden Informationen: Behandlung auf Kassenrezept und Privat, akzeptierte Krankenkassen, Ablauf bei Erstterminen und ob eine Überweisung nötig ist."
+            }
+        }
+    ]
 }
 </script>
 @endsection

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ihre Website in 30 Sekunden kostenlos bewertet | Praxis Website Score</title>
-    <meta name="description" content="Kostenloser Website-Check für Praxen, Handwerker & Restaurants. Wir analysieren Ladegeschwindigkeit, Google-Sichtbarkeit & Mobile-Darstellung. Ergebnis sofort — ohne Anmeldung.">
+    <meta name="description" content="Praxis Website check: Kostenlose Website Analyse für Zahnarzte, Arzte & Handwerker. Prüfen Sie Ladegeschwindigkeit, Google Sichtbarkeit & SEO. Jetzt kostenlos testen →">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://praxiswebsitescore.creativecoding.cloud/">
     <meta name="keywords" content="Website check, Praxis website, Website bewertung, SEO check, Website analyse, Arzt website, Handwerker website, Restaurant website, DACH">
@@ -148,9 +148,30 @@
     <style>
         #cookie-banner { display: none; }
         #cookie-banner.show { display: block; }
+        #exit-intent-popup { display: none; }
+        #exit-intent-popup.show { display: flex; }
     </style>
 </head>
 <body class="bg-white text-gray-800 font-sans">
+
+    <!-- Exit-Intent Popup -->
+    <div id="exit-intent-popup" class="fixed inset-0 z-[200] items-center justify-center bg-black/60 backdrop-blur-sm">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md mx-4 p-8 relative">
+            <button id="exit-popup-close" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl leading-none">&times;</button>
+            <div class="text-center">
+                <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <i class="fa-solid fa-gauge-high text-indigo-600 text-2xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Warten Sie!</h2>
+                <p class="text-lg font-medium text-gray-800 mb-3">Wie steht's um Ihre Praxis-Website?</p>
+                <p class="text-gray-600 mb-6">Lassen Sie Ihre Website in 30 Sekunden kostenlos prüfen — ohne Anmeldung, ohne Risiko.</p>
+                <a href="#hero-form" id="exit-popup-cta" class="inline-block w-full bg-indigo-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-indigo-700 transition text-center">
+                    Kostenloser Website-Check →
+                </a>
+                <p class="text-xs text-gray-400 mt-3">✓ DSGVO-konform &nbsp; ✓ Keine Kreditkarte</p>
+            </div>
+        </div>
+    </div>
 
     <!-- DSGVO Cookie Consent Banner -->
     <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-[100] shadow-lg">
@@ -222,6 +243,16 @@
                 <span class="flex items-center gap-2"><i class="fa-solid fa-server text-green-500"></i> Serverstandort Deutschland</span>
                 <span class="flex items-center gap-2"><i class="fa-solid fa-eye-slash text-green-500"></i> Kein Tracking</span>
                 <span class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Keine Kreditkarte nötig</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Banner -->
+    <section class="bg-indigo-600 py-4">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-8 text-sm text-white">
+                <span class="flex items-center gap-2 font-medium"><i class="fa-solid fa-users"></i> Bereits 500+ Praxen haben ihren Website-Score geprüft</span>
+                <span class="flex items-center gap-2 font-medium"><i class="fa-solid fa-building"></i> 1.926 Unternehmen in unserer Datenbank</span>
             </div>
         </div>
     </section>
@@ -495,6 +526,52 @@
                     if (banner) banner.classList.remove('show');
                 });
             }
+        })();
+
+        // Exit-Intent Popup
+        (function() {
+            var POPUP_KEY = 'pws_exit_popup_shown';
+            var popup = document.getElementById('exit-intent-popup');
+            if (!popup) return;
+
+            // Don't show if already shown this session or if user came from popup CTA
+            if (sessionStorage.getItem(POPUP_KEY)) return;
+
+            var triggered = false;
+
+            function showPopup() {
+                if (triggered) return;
+                triggered = true;
+                popup.classList.add('show');
+                sessionStorage.setItem(POPUP_KEY, 'true');
+            }
+
+            // Close button
+            document.getElementById('exit-popup-close').addEventListener('click', function(e) {
+                e.preventDefault();
+                popup.classList.remove('show');
+                sessionStorage.setItem(POPUP_KEY, 'true');
+            });
+
+            // CTA click also counts as interaction
+            document.getElementById('exit-popup-cta').addEventListener('click', function() {
+                popup.classList.remove('show');
+                sessionStorage.setItem(POPUP_KEY, 'true');
+            });
+
+            // Trigger when mouse leaves viewport toward top (close/back button)
+            document.addEventListener('mouseleave', function(e) {
+                if (e.clientY <= 0) {
+                    showPopup();
+                }
+            });
+
+            // Also trigger on Escape key or back button detection via visibility change
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden && !triggered) {
+                    // User might be switching tabs - don't show immediately
+                }
+            });
         })();
     </script>
 </body>
