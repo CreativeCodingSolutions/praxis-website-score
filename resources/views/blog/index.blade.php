@@ -32,6 +32,36 @@
     <p class="text-gray-500 mb-12">Tipps für bessere Praxis-Websites, mehr Patienten und stärkere Google-Sichtbarkeit im DACH-Raum.</p>
 
     <div class="space-y-8">
+        <!-- Post 43 (NEU) - Sommer-Relaunch -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Praxis Website Relaunch <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/sommer-relaunch-checkliste-praxiswebsite-2026" class="hover:text-indigo-600">Praxis-Website Relaunch im Juli: Warum Sommer beste Zeit ist</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">1. Juli 2026 · Lesezeit: 12 Min.</p>
+            <p class="text-gray-600">Warum Sommer-Relaunches funktionieren: Geringerer Praxisverkehr, bessere Google-Indexierung für Herbst, weniger Konkurrenz bei Keywords. Mit 4-Phasen-Methode und Checkliste.</p>
+        </article>
+
+        <!-- Post 42 (NEU) - Google Business Profile für Praxen -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Lokale Sichtbarkeit <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/google-business-profile-praxen-2026-checkliste" class="hover:text-indigo-600">Google Business Profile für Praxen: Die 2026 Checkliste</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">29. Juni 2026 · Lesezeit: 10 Min.</p>
+            <p class="text-gray-600">Die vollständige Checkliste für Ihr Google Business Profile als Praxis: Kategorie, Fotos, Beiträge, Bewertungen und Q&A — Schritt für Schritt zum besseren Ranking.</p>
+        </article>
+
+        <!-- Post 41 (NEU) - Praxis-Website Relaunch -->
+        <article class="border-b border-gray-200 pb-8">
+            <p class="text-sm text-indigo-600 font-medium mb-1">Praxis Website Relaunch <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
+            <h2 class="text-xl font-semibold mb-2">
+                <a href="/blog/praxis-website-relaunch-7-fehler" class="hover:text-indigo-600">Praxis-Website Relaunch: 7 Fehler, die Patienten wegtreiben</a>
+            </h2>
+            <p class="text-sm text-gray-400 mb-2">29. Juni 2026 · Lesezeit: 12 Min.</p>
+            <p class="text-gray-600">Diese 7 Fehler kosten Sie Patienten beim Website-Relaunch — von fehlender mobiler Optimierung über Ladezeit bis zu DSGVO. So vermeiden Sie sie.</p>
+        </article>
+
         <!-- Post 38 (NEU) - Lead-Recherche für Praxen -->
         <article class="border-b border-gray-200 pb-8">
             <p class="text-sm text-indigo-600 font-medium mb-1">Lead-Recherche <span class="bg-green-100 text-green-700 text-xs px-2 py-0.5 rounded-full ml-2">Neu</span></p>
